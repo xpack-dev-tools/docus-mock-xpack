@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: 'Multi-version, multi-platform',
+    title: 'Multi-version, cross-platform',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
