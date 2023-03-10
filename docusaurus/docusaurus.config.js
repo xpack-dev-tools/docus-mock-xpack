@@ -64,10 +64,10 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Docus Mock',
+        title: 'The xPack Project',
         logo: {
           alt: 'Docus Mock Logo',
-          src: 'img/logo.svg',
+          src: 'img/components-256',
         },
         items: [
           {
