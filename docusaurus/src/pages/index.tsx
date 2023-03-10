@@ -14,6 +14,7 @@ function HomepageHeader() {
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__code"><code>$ xpm install @xpack-dev-tools/docus-mock@latest --verbose</code></p>
       </div>
     </header>
   );
