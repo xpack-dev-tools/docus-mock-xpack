@@ -1,12 +1,12 @@
-# The xPack Ninja Build
+# The xPack Docus Mock
 
-**The xPack Ninja Build** is the **xPack** version of
+**The xPack Docus Mock** is the **xPack** version of
 the **Ninja** build system, an open source project.
 
 For more details, please read the corresponding release pages:
 
-- <https://xpack.github.io/ninja-build/releases/>
-- <https://ninja-build.org>
+- <https://xpack.github.io/docus-mock/releases/>
+- <https://docus-mock.org>
 
 Thank you for using open source software,
 

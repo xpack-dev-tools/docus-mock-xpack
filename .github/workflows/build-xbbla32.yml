@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Build xPack Ninja Build xbbla32'
+name: 'Build xPack Docus Mock xbbla32'
 
 on:
   workflow_dispatch:
@@ -56,7 +56,7 @@ on:
 jobs:
 
   linux-arm:
-    name: 'Linux Arm 32 - ninja-build ${{ github.event.inputs.version }} build'
+    name: 'Linux Arm 32 - docus-mock ${{ github.event.inputs.version }} build'
     timeout-minutes: 2880 # 2 days
     runs-on: [self-hosted, linux, arm, xbbla32]
     container:

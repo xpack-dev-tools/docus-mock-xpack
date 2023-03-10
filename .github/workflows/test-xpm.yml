@@ -20,7 +20,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Test xPack Ninja Build via xpm'
+name: 'Test xPack Docus Mock via xpm'
 
 on:
   workflow_dispatch:
@@ -37,7 +37,7 @@ on:
 jobs:
 
   linux-x64:
-    name: 'Linux Intel 64-bit Ninja Build@${{ github.event.inputs.version }} test'
+    name: 'Linux Intel 64-bit Docus Mock@${{ github.event.inputs.version }} test'
     runs-on: ubuntu-20.04
 
     steps:
@@ -68,9 +68,9 @@ jobs:
         with:
           entrypoint: /bin/bash
           args: /github/workspace/scripts/test.sh --image debian --version ${{ github.event.inputs.version }} --xpm
-  
+
   linux-arm64:
-    name: 'Linux Arm 64-bit Ninja Build@${{ github.event.inputs.version }} test'
+    name: 'Linux Arm 64-bit Docus Mock@${{ github.event.inputs.version }} test'
     # runs-on: [self-hosted, linux, arm64, xbbla]
     runs-on: [self-hosted, linux, arm64, xbbla64]
 
@@ -106,9 +106,9 @@ jobs:
         with:
           entrypoint: /bin/bash
           args: /github/workspace/scripts/test.sh --image debian --version ${{ github.event.inputs.version }} --xpm
-  
+
   linux-arm32:
-    name: 'Linux Arm 32-bit Ninja Build@${{ github.event.inputs.version }} test'
+    name: 'Linux Arm 32-bit Docus Mock@${{ github.event.inputs.version }} test'
     # runs-on: [self-hosted, linux, arm64, xbbla]
     runs-on: [self-hosted, linux, arm, xbbla32]
 
@@ -144,9 +144,9 @@ jobs:
         with:
           entrypoint: /bin/bash # /usr/bin/linux32
           args: /github/workspace/scripts/test.sh --image debian --version ${{ github.event.inputs.version }} --xpm
-  
+
   macos-x64:
-    name: 'macOS Intel 64-bit Ninja Build@${{ github.event.inputs.version }} test'
+    name: 'macOS Intel 64-bit Docus Mock@${{ github.event.inputs.version }} test'
     runs-on: macos-10.15
 
     steps:
@@ -178,9 +178,9 @@ jobs:
 
       - name: 'Run ${{ github.event.inputs.version }} xpm test'
         run: bash scripts/test.sh --version ${{ github.event.inputs.version }} --xpm
-  
+
   macos-arm64:
-    name: 'macOS Arm 64-bit Ninja Build@${{ github.event.inputs.version }} test'
+    name: 'macOS Arm 64-bit Docus Mock@${{ github.event.inputs.version }} test'
     runs-on: [self-hosted, macos, apple]
 
     steps:
@@ -212,9 +212,9 @@ jobs:
 
       - name: 'Run ${{ github.event.inputs.version }} xpm test'
         run: bash scripts/test.sh --version ${{ github.event.inputs.version }} --xpm
-  
+
   windows-x64:
-    name: 'Windows 64-bit Ninja Build@${{ github.event.inputs.version }} test'
+    name: 'Windows 64-bit Docus Mock@${{ github.event.inputs.version }} test'
     runs-on: windows-2022
     defaults:
       run:
@@ -247,5 +247,5 @@ jobs:
 
       - name: 'Run ${{ github.event.inputs.version }} xpm test'
         run: bash scripts/test.sh --version ${{ github.event.inputs.version }} --xpm
-  
+
 # -----------------------------------------------------------------------------

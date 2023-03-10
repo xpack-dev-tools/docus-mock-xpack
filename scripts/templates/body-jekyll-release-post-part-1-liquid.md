@@ -1,5 +1,5 @@
 ---
-title:  xPack Ninja Build v{{ XBB_RELEASE_VERSION }} released
+title:  xPack Docus Mock v{{ XBB_RELEASE_VERSION }} released
 
 TODO: select one summary
 
@@ -13,7 +13,7 @@ ninja_date: "30 Aug 2022"
 version: "{{ XBB_RELEASE_VERSION }}"
 npm_subversion: "1"
 
-download_url: https://github.com/xpack-dev-tools/ninja-build-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
+download_url: https://github.com/xpack-dev-tools/docus-mock-xpack/releases/tag/v{{ XBB_RELEASE_VERSION }}/
 
 comments: true
 
@@ -21,11 +21,11 @@ date:   {{ RELEASE_DATE }}
 
 categories:
   - releases
-  - ninja-build
+  - docus-mock
 
 tags:
   - releases
-  - ninja-build
+  - docus-mock
   - ninja
   - build
   - speed
@@ -33,9 +33,9 @@ tags:
 
 ---
 
-[The xPack Ninja Build](https://xpack.github.io/ninja-build/)
+[The xPack Docus Mock](https://xpack.github.io/docus-mock/)
 is a standalone cross-platform binary distribution of
-[Ninja Build](https://ninja-build.org).
+[Docus Mock](https://docus-mock.org).
 
 There are separate binaries for **Windows** (Intel 64-bit),
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
@@ -65,16 +65,16 @@ The binary files are available from GitHub [Releases]({% raw %}{{ page.download_
 
 ## Install
 
-The full details of installing the **xPack Ninja Build** on various platforms
+The full details of installing the **xPack Docus Mock** on various platforms
 are presented in the separate
-[Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/ninja-build/install/) page.
+[Install]({% raw %}{{ site.baseurl }}{% endraw %}/dev-tools/docus-mock/install/) page.
 
 ### Easy install
 
-The easiest way to install Ninja Build is with
+The easiest way to install Docus Mock is with
 [`xpm`]({% raw %}{{ site.baseurl }}{% endraw %}/xpm/)
 by using the **binary xPack**, available as
-[`@xpack-dev-tools/ninja-build`](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build)
+[`@xpack-dev-tools/docus-mock`](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
 
 With the `xpm` tool available, installing
@@ -85,7 +85,7 @@ a development dependency for a project is quite easy:
 cd my-project
 xpm init # Only at first use.
 
-xpm install @xpack-dev-tools/ninja-build@latest --verbose
+xpm install @xpack-dev-tools/docus-mock@latest --verbose
 
 ls -l xpacks/.bin
 ```
@@ -93,7 +93,7 @@ ls -l xpacks/.bin
 To install this specific version, use:
 
 ```sh
-xpm install @xpack-dev-tools/ninja-build@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %} --verbose
+xpm install @xpack-dev-tools/docus-mock@{% raw %}{{ page.version }}.{{ page.npm_subversion }}{% endraw %} --verbose
 ```
 
 It is also possible to install Meson Build globally, in the user home folder,
@@ -101,7 +101,7 @@ but this requires xPack aware tools to automatically identify them and
 manage paths.
 
 ```sh
-xpm install --global @xpack-dev-tools/ninja-build@latest --verbose
+xpm install --global @xpack-dev-tools/docus-mock@latest --verbose
 ```
 
 ### Uninstall
@@ -111,23 +111,23 @@ To remove the links created by xpm in the current project:
 ```sh
 cd my-project
 
-xpm uninstall @xpack-dev-tools/ninja-build
+xpm uninstall @xpack-dev-tools/docus-mock
 ```
 
 To completely remove the package from the global store:
 
 ```sh
-xpm uninstall --global @xpack-dev-tools/ninja-build
+xpm uninstall --global @xpack-dev-tools/docus-mock
 ```
 
 ## Compliance
 
-The xPack Ninja Build generally follows the official
-[Ninja Build](https://ninja-build.org) releases.
+The xPack Docus Mock generally follows the official
+[Docus Mock](https://docus-mock.org) releases.
 
 The current version is based on:
 
-- Ninja Build version {% raw %}{{ page.ninja_version }}{% endraw %}
+- Docus Mock version {% raw %}{{ page.ninja_version }}{% endraw %}
 from {% raw %}{{ page.ninja_date }}{% endraw %}.
 
 ## Changes
@@ -181,7 +181,7 @@ relative path.
 ## Documentation
 
 The original documentation is available
-[online](https://ninja-build.org/manual.html).
+[online](https://docus-mock.org/manual.html).
 
 ## Build
 
@@ -196,15 +196,15 @@ The scripts used to build this distribution are in:
 - `distro-info/scripts`
 
 For the prerequisites and more details on the build procedure, please see the
-[How to build](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-BUILD.md) page.
+[How to build](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/README-BUILD.md) page.
 
 ## CI tests
 
 Before publishing, a set of simple tests were performed on an exhaustive
 set of platforms. The results are available from:
 
-- [GitHub Actions](https://github.com/xpack-dev-tools/ninja-build-xpack/actions/)
-- [Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/ninja-build-xpack/builds/)
+- [GitHub Actions](https://github.com/xpack-dev-tools/docus-mock-xpack/actions/)
+- [Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/docus-mock-xpack/builds/)
 
 ## Tests
 

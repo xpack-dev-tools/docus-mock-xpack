@@ -9,11 +9,11 @@
 
 # -----------------------------------------------------------------------------
 
-# https://ninja-build.org
-# https://github.com/ninja-build/ninja/wiki
+# https://docus-mock.org
+# https://github.com/docus-mock/ninja/wiki
 # https://sourceforge.net/projects/msys2/files/REPOS/MSYS2/Sources/ninja-1.10.0-1.src.tar.gz/download
 
-# https://github.com/ninja-build/ninja/archive/v1.10.0.tar.gz
+# https://github.com/docus-mock/ninja/archive/v1.10.0.tar.gz
 
 # https://github.com/xpack-dev-tools/ninja/tags/
 # https://github.com/xpack-dev-tools/ninja/archive/refs/tags/v1.11.0-1-xpack.tar.gz

@@ -1,12 +1,12 @@
 
-[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack-dev-tools/ninja-build-xpack)](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/package.json)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xpack-dev-tools/ninja-build-xpack)](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/)
-[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/ninja-build.svg?color=blue)](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/)
-[![license](https://img.shields.io/github/license/xpack-dev-tools/ninja-build-xpack)](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/LICENSE)
+[![GitHub package.json version](https://img.shields.io/github/package-json/v/xpack-dev-tools/docus-mock-xpack)](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/package.json)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/xpack-dev-tools/docus-mock-xpack)](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/)
+[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/docus-mock.svg?color=blue)](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock/)
+[![license](https://img.shields.io/github/license/xpack-dev-tools/docus-mock-xpack)](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/LICENSE)
 
-# The xPack Ninja Build
+# The xPack Docus Mock
 
-A standalone cross-platform (Windows/macOS/Linux) **Ninja Build**
+A standalone cross-platform (Windows/macOS/Linux) **Docus Mock**
 binary distribution, intended for reproducible builds.
 
 In addition to the the binary archives and the package meta data,
@@ -15,12 +15,12 @@ this project also includes the build scripts.
 ## Overview
 
 This open source project is hosted on GitHub as
-[`xpack-dev-tools/ninja-build-xpack`](https://github.com/xpack-dev-tools/ninja-build-xpack)
+[`xpack-dev-tools/docus-mock-xpack`](https://github.com/xpack-dev-tools/docus-mock-xpack)
 and provides the platform specific binaries for the
-[xPack Ninja Build](https://xpack.github.io/ninja-build/).
+[xPack Docus Mock](https://xpack.github.io/docus-mock/).
 
 This distribution follows the official
-[Ninja](https://ninja-build.org) build system.
+[Ninja](https://docus-mock.org) build system.
 
 The binaries can be installed automatically as **binary xPacks** or manually as
 **portable archives**.
@@ -34,13 +34,13 @@ more weeks to get the latest patch release.
 ## User info
 
 This section is intended as a shortcut for those who plan
-to use the Ninja Build binaries. For full details please read the
-[xPack Ninja Build](https://xpack.github.io/ninja-build/) pages.
+to use the Docus Mock binaries. For full details please read the
+[xPack Docus Mock](https://xpack.github.io/docus-mock/) pages.
 
 ### Easy install
 
-The easiest way to install Ninja Build is using the **binary xPack**, available as
-[`@xpack-dev-tools/ninja-build`](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build)
+The easiest way to install Docus Mock is using the **binary xPack**, available as
+[`@xpack-dev-tools/docus-mock`](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
 
 #### Prerequisites
@@ -67,7 +67,7 @@ a development dependency for a project is quite easy:
 cd my-project
 xpm init # Only at first use.
 
-xpm install @xpack-dev-tools/ninja-build@latest --verbose
+xpm install @xpack-dev-tools/docus-mock@latest --verbose
 
 ls -l xpacks/.bin
 ```
@@ -87,18 +87,18 @@ This location is configurable via the environment variable
 `XPACKS_STORE_FOLDER`; for more details please check the
 [xpm folders](https://xpack.github.io/xpm/folders/) page.
 
-It is also possible to install Ninja Build globally, in the user home folder:
+It is also possible to install Docus Mock globally, in the user home folder:
 
 ```sh
-xpm install --global @xpack-dev-tools/ninja-build@latest --verbose
+xpm install --global @xpack-dev-tools/docus-mock@latest --verbose
 ```
 
 After install, the package should create a structure like this (macOS files;
 only the first two depth levels are shown):
 
 ```console
-$ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/ninja-build/1.11.1-2.1/.content/
-/Users/ilg/Library/xPacks/\@xpack-dev-tools/ninja-build/1.11.1-2.1/.content/
+$ tree -L 2 /Users/ilg/Library/xPacks/\@xpack-dev-tools/docus-mock/1.11.1-2.1/.content/
+/Users/ilg/Library/xPacks/\@xpack-dev-tools/docus-mock/1.11.1-2.1/.content/
 ├── README.md
 ├── bin
 │   └── ninja
@@ -124,27 +124,27 @@ To remove the links created by xpm in the current project:
 ```sh
 cd my-project
 
-xpm uninstall @xpack-dev-tools/ninja-build
+xpm uninstall @xpack-dev-tools/docus-mock
 ```
 
 To completely remove the package from the global store:
 
 ```sh
-xpm uninstall --global @xpack-dev-tools/ninja-build
+xpm uninstall --global @xpack-dev-tools/docus-mock
 ```
 
 ### Manual install
 
-For all platforms, the **xPack Ninja Build**
+For all platforms, the **xPack Docus Mock**
 binaries are released as portable
 archives that can be installed in any location.
 
 The archives can be downloaded from the
-GitHub [Releases](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/)
+GitHub [Releases](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/)
 page.
 
 For more details please read the
-[Install](https://xpack.github.io/ninja-build/install/) page.
+[Install](https://xpack.github.io/docus-mock/install/) page.
 
 ### Versioning
 
@@ -162,15 +162,15 @@ with caution, and prefer exact matches, like `1.11.1-2.1`.
 ## Maintainer info
 
 For maintainer info, please see the
-[README-MAINTAINER](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-MAINTAINER.md)
+[README-MAINTAINER](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/README-MAINTAINER.md)
 
 ## Support
 
 The quick advice for getting support is to use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/ninja-build-xpack/discussions/).
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/).
 
 For more details please read the
-[Support](https://xpack.github.io/ninja-build/support/) page.
+[Support](https://xpack.github.io/docus-mock/support/) page.
 
 ## License
 
@@ -184,16 +184,16 @@ corresponding licenses are available in the installed
 
 ## Download analytics
 
-- GitHub [`xpack-dev-tools/ninja-build-xpack`](https://github.com/xpack-dev-tools/ninja-build-xpack/) repo
+- GitHub [`xpack-dev-tools/docus-mock-xpack`](https://github.com/xpack-dev-tools/docus-mock-xpack/) repo
   - latest xPack release
-[![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/ninja-build-xpack/latest/total.svg)](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/)
-  - all xPack releases [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/ninja-build-xpack/total.svg)](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/)
-  - [individual file counters](https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&repository=ninja-build-xpack) (grouped per release)
-- npmjs.com [`@xpack-dev-tools/ninja-build`](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/) xPack
+[![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/docus-mock-xpack/latest/total.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/)
+  - all xPack releases [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/docus-mock-xpack/total.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/)
+  - [individual file counters](https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&repository=docus-mock-xpack) (grouped per release)
+- npmjs.com [`@xpack-dev-tools/docus-mock`](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock/) xPack
   - latest release, per month
-[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/ninja-build.svg)](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/)
-[![npm](https://img.shields.io/npm/dm/@xpack-dev-tools/ninja-build.svg)](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/)
-  - all releases [![npm](https://img.shields.io/npm/dt/@xpack-dev-tools/ninja-build.svg)](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build/)
+[![npm (scoped)](https://img.shields.io/npm/v/@xpack-dev-tools/docus-mock.svg)](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock/)
+[![npm](https://img.shields.io/npm/dm/@xpack-dev-tools/docus-mock.svg)](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock/)
+  - all releases [![npm](https://img.shields.io/npm/dt/@xpack-dev-tools/docus-mock.svg)](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock/)
 
 Credit to [Shields IO](https://shields.io) for the badges and to
 [Somsubhra/github-release-stats](https://github.com/Somsubhra/github-release-stats)

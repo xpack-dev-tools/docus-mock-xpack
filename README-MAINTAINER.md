@@ -1,6 +1,6 @@
-[![license](https://img.shields.io/github/license/xpack-dev-tools/ninja-build-xpack)](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/xpack-dev-tools/ninja-build-xpack.svg)](https://github.com/xpack-dev-tools/ninja-build-xpack/issues/)
-[![GitHub pulls](https://img.shields.io/github/issues-pr/xpack-dev-tools/ninja-build-xpack.svg)](https://github.com/xpack-dev-tools/ninja-build-xpack/pulls)
+[![license](https://img.shields.io/github/license/xpack-dev-tools/docus-mock-xpack)](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/xpack-dev-tools/docus-mock-xpack.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/issues/)
+[![GitHub pulls](https://img.shields.io/github/issues-pr/xpack-dev-tools/docus-mock-xpack.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/pulls)
 
 # Maintainer info
 
@@ -8,26 +8,26 @@
 
 The project is hosted on GitHub:
 
-- <https://github.com/xpack-dev-tools/ninja-build-xpack.git>
+- <https://github.com/xpack-dev-tools/docus-mock-xpack.git>
 
 To clone the stable branch (`xpack`), run the following commands in a
 terminal (on Windows use the _Git Bash_ console):
 
 ```sh
-rm -rf ~/Work/xpacks/ninja-build-xpack.git && \
-git clone https://github.com/xpack-dev-tools/ninja-build-xpack.git \
-  ~/Work/xpacks/ninja-build-xpack.git
+rm -rf ~/Work/xpacks/docus-mock-xpack.git && \
+git clone https://github.com/xpack-dev-tools/docus-mock-xpack.git \
+  ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 For development purposes, clone the `xpack-develop` branch:
 
 ```sh
-rm -rf ~/Work/xpacks/ninja-build-xpack.git && \
+rm -rf ~/Work/xpacks/docus-mock-xpack.git && \
 mkdir -p ~/Work/xpacks && \
 git clone \
   --branch xpack-develop \
-  https://github.com/xpack-dev-tools/ninja-build-xpack.git \
-  ~/Work/xpacks/ninja-build-xpack.git
+  https://github.com/xpack-dev-tools/docus-mock-xpack.git \
+  ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 ## Get helper sources
@@ -59,8 +59,8 @@ A recent [xpm](https://xpack.github.io/xpm/), which is a portable
 
 ## Release schedule
 
-The xPack Ninja Build release schedule generally follows the original GitHub
-[releases](https://github.com/ninja-build/ninja/releases/), but with a
+The xPack Docus Mock release schedule generally follows the original GitHub
+[releases](https://github.com/docus-mock/ninja/releases/), but with a
 few weeks filter, which means that releases that are overridden in
 a few weeks may be skipped.
 
@@ -71,7 +71,7 @@ Before starting the build, perform some checks and tweaks.
 ### Download the build scripts
 
 The build scripts are available in the `scripts` folder of the
-[`xpack-dev-tools/ninja-build-xpack`](https://github.com/xpack-dev-tools/ninja-build-xpack)
+[`xpack-dev-tools/docus-mock-xpack`](https://github.com/xpack-dev-tools/docus-mock-xpack)
 Git repo.
 
 To download them on a new machine, clone the `xpack-develop` branch,
@@ -79,7 +79,7 @@ as seen above.
 
 ### Check Git
 
-In the `xpack-dev-tools/ninja-build-xpack` Git repo:
+In the `xpack-dev-tools/docus-mock-xpack` Git repo:
 
 - switch to the `xpack-develop` branch
 - pull new changes
@@ -89,8 +89,8 @@ No need to add a tag here, it'll be added when the release is created.
 
 ### Check the latest upstream release
 
-Check the Ninja Build GitHub [Releases](https://github.com/ninja-build/ninja/releases/)
-and compare the the xPack [Releases](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/).
+Check the Docus Mock GitHub [Releases](https://github.com/docus-mock/ninja/releases/)
+and compare the the xPack [Releases](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/).
 
 ### Increase the version
 
@@ -103,7 +103,7 @@ the package on the `npm` server.
 
 Check GitHub issues and pull requests:
 
-- <https://github.com/xpack-dev-tools/ninja-build-xpack/issues/>
+- <https://github.com/xpack-dev-tools/docus-mock-xpack/issues/>
 
 and fix them; assign them to a milestone (like `1.11.1-2`).
 
@@ -167,16 +167,16 @@ For Intel macOS, first run the build on the development machine
 
 ```sh
 # Update the build scripts.
-git -C ~/Work/xpacks/ninja-build-xpack.git pull
+git -C ~/Work/xpacks/docus-mock-xpack.git pull
 
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git
 
 # For backup overhead reasons, on the development machine
 # the builds happen on a separate Work folder.
-rm -rf ~/Work/ninja-build-[0-9]*-*
+rm -rf ~/Work/docus-mock-[0-9]*-*
 
-xpm install --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run build-develop --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm install --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run build-develop --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 When functional, push the `xpack-develop` branch to GitHub.
@@ -191,14 +191,14 @@ caffeinate ssh xbbmi
 
 ```sh
 # Update the build scripts (or clone them the first time).
-git -C ~/Work/xpacks/ninja-build-xpack.git pull
+git -C ~/Work/xpacks/docus-mock-xpack.git pull
 
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git
 
-xpm run deep-clean --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run deep-clean --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
 
-xpm install --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run build-develop --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm install --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run build-develop --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 The build takes about 30 minutes.
@@ -216,24 +216,24 @@ caffeinate ssh xbbmi
 Repeat the same steps as before.
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull && \
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git && \
+git -C ~/Work/xpacks/docus-mock-xpack.git pull && \
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git && \
 git -C ~/Work/xpacks/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpacks/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run deep-clean --config darwin-x64  -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm install --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run build-develop --config darwin-x64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run link-deps -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run deep-clean --config darwin-x64  -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm install --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run build-develop --config darwin-x64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpacks/ninja-build-xpack.git/build/darwin-x64/deploy
+$ ls -l ~/Work/xpacks/docus-mock-xpack.git/build/darwin-x64/deploy
 total 312
--rw-r--r--  1 ilg  staff  153317 Jan 23 23:11 xpack-ninja-build-1.11.1-2-darwin-x64.tar.gz
--rw-r--r--  1 ilg  staff     111 Jan 23 23:11 xpack-ninja-build-1.11.1-2-darwin-x64.tar.gz.sha
+-rw-r--r--  1 ilg  staff  153317 Jan 23 23:11 xpack-docus-mock-1.11.1-2-darwin-x64.tar.gz
+-rw-r--r--  1 ilg  staff     111 Jan 23 23:11 xpack-docus-mock-1.11.1-2-darwin-x64.tar.gz.sha
 ```
 
 #### Apple Silicon macOS
@@ -249,24 +249,24 @@ caffeinate ssh xbbma
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull && \
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git && \
+git -C ~/Work/xpacks/docus-mock-xpack.git pull && \
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git && \
 git -C ~/Work/xpacks/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpacks/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run deep-clean --config darwin-arm64  -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm install --config darwin-arm64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run build-develop --config darwin-arm64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run link-deps -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run deep-clean --config darwin-arm64  -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm install --config darwin-arm64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run build-develop --config darwin-arm64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpacks/ninja-build-xpack.git/build/darwin-arm64/deploy
+$ ls -l ~/Work/xpacks/docus-mock-xpack.git/build/darwin-arm64/deploy
 total 304
--rw-r--r--  1 ilg  staff  147640 Jan 23 23:11 xpack-ninja-build-1.11.1-2-darwin-arm64.tar.gz
--rw-r--r--  1 ilg  staff     113 Jan 23 23:11 xpack-ninja-build-1.11.1-2-darwin-arm64.tar.gz.sha
+-rw-r--r--  1 ilg  staff  147640 Jan 23 23:11 xpack-docus-mock-1.11.1-2-darwin-arm64.tar.gz
+-rw-r--r--  1 ilg  staff     113 Jan 23 23:11 xpack-docus-mock-1.11.1-2-darwin-arm64.tar.gz.sha
 ```
 
 #### Intel GNU/Linux
@@ -283,25 +283,25 @@ caffeinate ssh xbbli
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull && \
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git && \
+git -C ~/Work/xpacks/docus-mock-xpack.git pull && \
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git && \
 git -C ~/Work/xpacks/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpacks/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run deep-clean --config linux-x64 -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-prepare --config linux-x64 -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-link-deps --config linux-x64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run docker-build-develop --config linux-x64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run link-deps -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run deep-clean --config linux-x64 -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-prepare --config linux-x64 -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-link-deps --config linux-x64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run docker-build-develop --config linux-x64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpacks/ninja-build-xpack.git/build/linux-x64/deploy
+$ ls -l ~/Work/xpacks/docus-mock-xpack.git/build/linux-x64/deploy
 total 364
--rw-r--r-- 1 ilg ilg 367167 Jan 23 21:12 xpack-ninja-build-1.11.1-2-linux-x64.tar.gz
--rw-r--r-- 1 ilg ilg    110 Jan 23 21:12 xpack-ninja-build-1.11.1-2-linux-x64.tar.gz.sha
+-rw-r--r-- 1 ilg ilg 367167 Jan 23 21:12 xpack-docus-mock-1.11.1-2-linux-x64.tar.gz
+-rw-r--r-- 1 ilg ilg    110 Jan 23 21:12 xpack-docus-mock-1.11.1-2-linux-x64.tar.gz.sha
 ```
 
 ##### Build the Windows binaries
@@ -309,25 +309,25 @@ total 364
 Clean the build folder and prepare the docker container:
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull && \
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git && \
+git -C ~/Work/xpacks/docus-mock-xpack.git pull && \
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git && \
 git -C ~/Work/xpacks/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpacks/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run deep-clean --config win32-x64 -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-prepare --config win32-x64 -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-link-deps --config win32-x64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run docker-build-develop --config win32-x64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run link-deps -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run deep-clean --config win32-x64 -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-prepare --config win32-x64 -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-link-deps --config win32-x64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run docker-build-develop --config win32-x64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpacks/ninja-build-xpack.git/build/win32-x64/deploy
+$ ls -l ~/Work/xpacks/docus-mock-xpack.git/build/win32-x64/deploy
 total 520
--rw-r--r-- 1 ilg ilg 527262 Jan 23 21:14 xpack-ninja-build-1.11.1-2-win32-x64.zip
--rw-r--r-- 1 ilg ilg    107 Jan 23 21:14 xpack-ninja-build-1.11.1-2-win32-x64.zip.sha
+-rw-r--r-- 1 ilg ilg 527262 Jan 23 21:14 xpack-docus-mock-1.11.1-2-win32-x64.zip
+-rw-r--r-- 1 ilg ilg    107 Jan 23 21:14 xpack-docus-mock-1.11.1-2-win32-x64.zip.sha
 ```
 
 #### Arm GNU/Linux 64-bit
@@ -342,25 +342,25 @@ caffeinate ssh xbbla64
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull && \
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git && \
+git -C ~/Work/xpacks/docus-mock-xpack.git pull && \
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git && \
 git -C ~/Work/xpacks/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpacks/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run deep-clean --config linux-arm64 -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-prepare --config linux-arm64 -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-link-deps --config linux-arm64 -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run docker-build-develop --config linux-arm64 -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run link-deps -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run deep-clean --config linux-arm64 -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-prepare --config linux-arm64 -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-link-deps --config linux-arm64 -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run docker-build-develop --config linux-arm64 -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpacks/ninja-build-xpack.git/build/linux-arm64/deploy
+$ ls -l ~/Work/xpacks/docus-mock-xpack.git/build/linux-arm64/deploy
 total 344
--rw-r--r-- 1 ilg ilg 347709 Jan 23 21:15 xpack-ninja-build-1.11.1-2-linux-arm64.tar.gz
--rw-r--r-- 1 ilg ilg    112 Jan 23 21:15 xpack-ninja-build-1.11.1-2-linux-arm64.tar.gz.sha
+-rw-r--r-- 1 ilg ilg 347709 Jan 23 21:15 xpack-docus-mock-1.11.1-2-linux-arm64.tar.gz
+-rw-r--r-- 1 ilg ilg    112 Jan 23 21:15 xpack-docus-mock-1.11.1-2-linux-arm64.tar.gz.sha
 ```
 
 #### Arm GNU/Linux 32-bit
@@ -375,25 +375,25 @@ caffeinate ssh xbbla32
 Update the build scripts (or clone them at the first use):
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull && \
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git && \
+git -C ~/Work/xpacks/docus-mock-xpack.git pull && \
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git && \
 git -C ~/Work/xpacks/xbb-helper-xpack.git pull && \
 xpm link -C ~/Work/xpacks/xbb-helper-xpack.git && \
-xpm run link-deps -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run deep-clean --config linux-arm -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-prepare --config linux-arm -C ~/Work/xpacks/ninja-build-xpack.git && \
-xpm run docker-link-deps --config linux-arm -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run docker-build-develop --config linux-arm -C ~/Work/xpacks/ninja-build-xpack.git
+xpm run link-deps -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run deep-clean --config linux-arm -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-prepare --config linux-arm -C ~/Work/xpacks/docus-mock-xpack.git && \
+xpm run docker-link-deps --config linux-arm -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run docker-build-develop --config linux-arm -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 Several minutes later, the output of the build script is a compressed
 archive and its SHA signature, created in the `deploy` folder:
 
 ```console
-$ ls -l ~/Work/xpacks/ninja-build-xpack.git/build/linux-arm/deploy
+$ ls -l ~/Work/xpacks/docus-mock-xpack.git/build/linux-arm/deploy
 total 316
--rw-r--r-- 1 ilg ilg 317951 Jan 23 21:16 xpack-ninja-build-1.11.1-2-linux-arm.tar.gz
--rw-r--r-- 1 ilg ilg    110 Jan 23 21:16 xpack-ninja-build-1.11.1-2-linux-arm.tar.gz.sha
+-rw-r--r-- 1 ilg ilg 317951 Jan 23 21:16 xpack-docus-mock-1.11.1-2-linux-arm.tar.gz
+-rw-r--r-- 1 ilg ilg    110 Jan 23 21:16 xpack-docus-mock-1.11.1-2-linux-arm.tar.gz.sha
 ```
 
 ### Files cache
@@ -472,17 +472,17 @@ To trigger the GitHub Actions build, use the xPack action:
 This is equivalent to:
 
 ```sh
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbli
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla64
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla32
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbmi
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbma
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbli
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla64
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla32
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbmi
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbma
 ```
 
 These scripts require the `GITHUB_API_DISPATCH_TOKEN` variable to be present
 in the environment, and the organization `PUBLISH_TOKEN` to be visible in the
 Settings → Action →
-[Secrets](https://github.com/xpack-dev-tools/ninja-build-xpack/settings/secrets/actions)
+[Secrets](https://github.com/xpack-dev-tools/docus-mock-xpack/settings/secrets/actions)
 page.
 
 These commands use the `xpack-develop` branch of this repo.
@@ -492,7 +492,7 @@ These commands use the `xpack-develop` branch of this repo.
 The builds take a few minutes to complete.
 
 The workflow result and logs are available from the
-[Actions](https://github.com/xpack-dev-tools/ninja-build-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/docus-mock-xpack/actions/) page.
 
 The resulting binaries are available for testing from
 [pre-releases/test](https://github.com/xpack-dev-tools/pre-releases/releases/tag/test/).
@@ -512,9 +512,9 @@ To trigger the GitHub Actions tests, use the xPack actions:
 These are equivalent to:
 
 ```sh
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-prime.sh
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-intel.sh
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-arm.sh
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-prime.sh
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-intel.sh
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-arm.sh
 ```
 
 These scripts require the `GITHUB_API_DISPATCH_TOKEN` variable to be present
@@ -525,7 +525,7 @@ These actions use the `xpack-develop` branch of this repo and the
 binaries.
 
 The tests results are available from the
-[Actions](https://github.com/xpack-dev-tools/ninja-build-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/docus-mock-xpack/actions/) page.
 
 Since GitHub Actions provides a single version of macOS, the
 multi-version macOS tests run on Travis.
@@ -537,14 +537,14 @@ To trigger the Travis test, use the xPack action:
 This is equivalent to:
 
 ```sh
-bash ~/Work/xpacks/ninja-build-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-travis-macos.sh
+bash ~/Work/xpacks/docus-mock-xpack.git/xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-travis-macos.sh
 ```
 
 This script requires the `TRAVIS_COM_TOKEN` variable to be present
 in the environment.
 
 The test results are available from
-[Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/ninja-build-xpack/builds/).
+[Travis CI](https://app.travis-ci.com/github/xpack-dev-tools/docus-mock-xpack/builds/).
 
 ### Manual tests
 
@@ -552,9 +552,9 @@ To download the pre-released archive for the specific platform
 and run the tests, use:
 
 ```sh
-git -C ~/Work/xpacks/ninja-build-xpack.git pull
-xpm run install -C ~/Work/xpacks/ninja-build-xpack.git
-xpm run test-pre-release -C ~/Work/xpacks/ninja-build-xpack.git
+git -C ~/Work/xpacks/docus-mock-xpack.git pull
+xpm run install -C ~/Work/xpacks/docus-mock-xpack.git
+xpm run test-pre-release -C ~/Work/xpacks/docus-mock-xpack.git
 ```
 
 For even more tests, on each platform (MacOS, GNU/Linux, Windows),
@@ -571,14 +571,14 @@ xattr -dr com.apple.quarantine ${HOME}/Downloads/xpack-*
 On GNU/Linux and macOS systems, use:
 
 ```sh
-.../xpack-ninja-build-1.11.1-2/bin/ninja --version
+.../xpack-docus-mock-1.11.1-2/bin/ninja --version
 1.11.1
 ```
 
 On Windows use:
 
 ```dos
-...\xpack-ninja-build-1.11.1-2\bin\ninja --version
+...\xpack-docus-mock-1.11.1-2\bin\ninja --version
 1.11.1
 ```
 
@@ -591,12 +591,12 @@ On Windows use:
 - run the xPack action `trigger-workflow-publish-release`
 
 The workflow result and logs are available from the
-[Actions](https://github.com/xpack-dev-tools/ninja-build-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/docus-mock-xpack/actions/) page.
 
 The result is a
-[draft pre-release](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/)
+[draft pre-release](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/)
 tagged like **v1.11.1-2** (mind the dash in the middle!) and
-named like **xPack Ninja Build v1.11.1-2** (mind the dash),
+named like **xPack Docus Mock v1.11.1-2** (mind the dash),
 with all binaries attached.
 
 - edit the draft and attach it to the `xpack-develop` branch (important!)
@@ -605,31 +605,31 @@ with all binaries attached.
 ## Prepare a new blog post
 
 - check and possibly update the `templates/body-jekyll-release-*-liquid.md`
-  (for the release dates use <https://github.com/ninja-build/ninja/releases/>)
+  (for the release dates use <https://github.com/docus-mock/ninja/releases/>)
 - run the xPack action `generate-jekyll-post`; this will leave a file
 on the Desktop.
 
 In the `xpack/web-jekyll` GitHub repo:
 
 - select the `develop` branch
-- copy the new file to `_posts/releases/ninja-build`
+- copy the new file to `_posts/releases/docus-mock`
 - update version and date from last
-[release](https://github.com/ninja-build/ninja/releases/).
+[release](https://github.com/docus-mock/ninja/releases/).
 
 If any, refer to closed
-[issues](https://github.com/xpack-dev-tools/ninja-build-xpack/issues/).
+[issues](https://github.com/xpack-dev-tools/docus-mock-xpack/issues/).
 
 ## Update the preview Web
 
 - commit the `develop` branch of `xpack/web-jekyll` GitHub repo;
-  use a message like _xPack Ninja Build v1.11.1-2 released_
+  use a message like _xPack Docus Mock v1.11.1-2 released_
 - push to GitHub
 - wait for the GitHub Pages build to complete
 - the preview web is <https://xpack.github.io/web-preview/news/>
 
 ## Create the pre-release
 
-- go to the GitHub [Releases](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/) page
+- go to the GitHub [Releases](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/) page
 - perform the final edits and check if everything is fine
 - temporarily fill in the _Continue Reading »_ with the URL of the
   web-preview release
@@ -684,7 +684,7 @@ watching this project.
 
 After a few moments the version will be visible at:
 
-- <https://www.npmjs.com/package/@xpack-dev-tools/ninja-build?activeTab=versions>
+- <https://www.npmjs.com/package/@xpack-dev-tools/docus-mock?activeTab=versions>
 
 ## Test if the binaries can be installed with xpm
 
@@ -692,7 +692,7 @@ Run the xPack action `trigger-workflow-test-xpm`, this
 will install the package via `xpm install` on all supported platforms.
 
 The tests results are available from the
-[Actions](https://github.com/xpack-dev-tools/ninja-build-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/docus-mock-xpack/actions/) page.
 
 ## Update the repo
 
@@ -703,13 +703,13 @@ The tests results are available from the
 
 When the release is considered stable, promote it as `latest`:
 
-- `npm dist-tag ls @xpack-dev-tools/ninja-build`
-- `npm dist-tag add @xpack-dev-tools/ninja-build@1.11.1-2.1 latest`
-- `npm dist-tag ls @xpack-dev-tools/ninja-build`
+- `npm dist-tag ls @xpack-dev-tools/docus-mock`
+- `npm dist-tag add @xpack-dev-tools/docus-mock@1.11.1-2.1 latest`
+- `npm dist-tag ls @xpack-dev-tools/docus-mock`
 
 In case the previous version is not functional and needs to be unpublished:
 
-- `npm unpublish @xpack-dev-tools/ninja-build@1.11.1-2.1`
+- `npm unpublish @xpack-dev-tools/docus-mock@1.11.1-2.1`
 
 ## Update the Web
 
@@ -720,7 +720,7 @@ In case the previous version is not functional and needs to be unpublished:
 
 ## Create the final GitHub release
 
-- go to the GitHub [Releases](https://github.com/xpack-dev-tools/ninja-build-xpack/releases/) page
+- go to the GitHub [Releases](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/) page
 - check the download counter, it should match the number of tests
 - add a link to the Web page `[Continue reading »]()`; use an same blog URL
 - remove the _tests only_ notice
@@ -731,9 +731,9 @@ In case the previous version is not functional and needs to be unpublished:
 
 - in a separate browser windows, open [TweetDeck](https://tweetdeck.twitter.com/)
 - using the `@xpack_project` account
-- paste the release name like **xPack Ninja Build v1.11.1-2 released**
+- paste the release name like **xPack Docus Mock v1.11.1-2 released**
 - paste the link to the Web page
-  [release](https://xpack.github.io/ninja-build/releases/)
+  [release](https://xpack.github.io/docus-mock/releases/)
 - click the **Tweet** button
 
 ## Remove the pre-release binaries
@@ -747,4 +747,4 @@ Run the xPack action `trigger-workflow-deep-clean`, this
 will remove the build folders on all supported platforms.
 
 The results are available from the
-[Actions](https://github.com/xpack-dev-tools/ninja-build-xpack/actions/) page.
+[Actions](https://github.com/xpack-dev-tools/docus-mock-xpack/actions/) page.

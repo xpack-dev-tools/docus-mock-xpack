@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 
-name: 'Build xPack Ninja Build xbbmi'
+name: 'Build xPack Docus Mock xbbmi'
 
 on:
   workflow_dispatch:
@@ -56,7 +56,7 @@ on:
 jobs:
 
   macos-x64:
-    name: 'macOS Intel - ninja-build ${{ github.event.inputs.version }} build'
+    name: 'macOS Intel - docus-mock ${{ github.event.inputs.version }} build'
     timeout-minutes: 2880 # 2 days
 
     runs-on: [self-hosted, macos, intel]
@@ -96,7 +96,7 @@ jobs:
         run: |
           xpm install --config darwin-x64 --loglevel ${{ github.event.inputs.xpm_install_loglevel }} ${{ github.event.inputs.xpm_install_options }}
           xpm run build --config darwin-x64
-  
+
       - name: 'Publish pre-release'
         # https://github.com/ncipollo/release-action
         uses: ncipollo/release-action@v1

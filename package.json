@@ -1,7 +1,7 @@
 {
-  "name": "@xpack-dev-tools/ninja-build",
+  "name": "@xpack-dev-tools/docus-mock",
   "version": "1.11.1-2.1",
-  "description": "A binary xPack with the Ninja Build executables",
+  "description": "A binary xPack with the Docus Mock executables",
   "main": "",
   "scripts": {
     "npm-install": "npm install",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xpack-dev-tools/ninja-build-xpack.git/"
+    "url": "https://github.com/xpack-dev-tools/docus-mock-xpack.git/"
   },
   "bugs": {
-    "url": "https://github.com/xpack-dev-tools/ninja-build-xpack/issues/"
+    "url": "https://github.com/xpack-dev-tools/docus-mock-xpack/issues/"
   },
-  "homepage": "https://github.com/xpack-dev-tools/ninja-build-xpack#readme",
+  "homepage": "https://github.com/xpack-dev-tools/docus-mock-xpack#readme",
   "keywords": [
     "xpack",
     "ninja",
@@ -35,31 +35,31 @@
     "minimumXpmRequired": "0.14.0",
     "binaries": {
       "destination": "./.content",
-      "baseUrl": "https://github.com/xpack-dev-tools/ninja-build-xpack/releases/download/v1.11.1-2",
+      "baseUrl": "https://github.com/xpack-dev-tools/docus-mock-xpack/releases/download/v1.11.1-2",
       "skip": 1,
       "platforms": {
         "darwin-arm64": {
-          "fileName": "xpack-ninja-build-1.11.1-2-darwin-arm64.tar.gz",
+          "fileName": "xpack-docus-mock-1.11.1-2-darwin-arm64.tar.gz",
           "sha256": "cbf57ea055028966107fa377b9e4325e4508308fcc47a238f4d678eb65c094ae"
         },
         "darwin-x64": {
-          "fileName": "xpack-ninja-build-1.11.1-2-darwin-x64.tar.gz",
+          "fileName": "xpack-docus-mock-1.11.1-2-darwin-x64.tar.gz",
           "sha256": "915eeff2cb8d106804435bca654cc81b35c935f8cd00be3b84e60d42aa5e8555"
         },
         "linux-arm64": {
-          "fileName": "xpack-ninja-build-1.11.1-2-linux-arm64.tar.gz",
+          "fileName": "xpack-docus-mock-1.11.1-2-linux-arm64.tar.gz",
           "sha256": "44e0263a886a75baf4fb56e348326dfb62ae5325c38a2ba02977982ecb1818a8"
         },
         "linux-arm": {
-          "fileName": "xpack-ninja-build-1.11.1-2-linux-arm.tar.gz",
+          "fileName": "xpack-docus-mock-1.11.1-2-linux-arm.tar.gz",
           "sha256": "28f68d64fdcf5fbb2e816dc4ae049c689ebbac6ddb5156bf7c4cf6b36c1d0efd"
         },
         "linux-x64": {
-          "fileName": "xpack-ninja-build-1.11.1-2-linux-x64.tar.gz",
+          "fileName": "xpack-docus-mock-1.11.1-2-linux-x64.tar.gz",
           "sha256": "cfd4c4b815183ef513151b05aa576974fc169164d4a706ca1f1b7c350b66107b"
         },
         "win32-x64": {
-          "fileName": "xpack-ninja-build-1.11.1-2-win32-x64.zip",
+          "fileName": "xpack-docus-mock-1.11.1-2-win32-x64.zip",
           "sha256": "da68e7157bda76cb79c9b86ae00fd1856a24f971fdeab7138ab06ab6882c9d13"
         }
       }
@@ -71,8 +71,8 @@
       "@xpack-dev-tools/xbb-helper": "^1.4.7"
     },
     "properties": {
-      "appName": "Ninja Build",
-      "appLcName": "ninja-build",
+      "appName": "Docus Mock",
+      "appLcName": "docus-mock",
       "platforms": "all",
       "LIQUIDJS": "liquidjs '{ \"XBB_APPLICATION_NAME\": \"{{ properties.appName }}\", \"XBB_APPLICATION_LOWER_CASE_NAME\": \"{{ properties.appLcName }}\", \"platforms\": \"{{ properties.platforms }}\" }'",
       "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
@@ -146,7 +146,7 @@
         "hidden": true,
         "devDependencies": {
           "@xpack-dev-tools/cmake": "3.23.5-1.1",
-          "@xpack-dev-tools/ninja-build": "1.11.1-2.1",
+          "@xpack-dev-tools/docus-mock": "1.11.1-2.1",
           "@xpack-dev-tools/pkg-config": "0.29.2-2.1"
         }
       },
