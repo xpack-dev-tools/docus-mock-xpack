@@ -1,0 +1,291 @@
+{
+  "name": "@xpack-dev-tools/ninja-build",
+  "version": "1.11.1-2.1",
+  "description": "A binary xPack with the Ninja Build executables",
+  "main": "",
+  "scripts": {
+    "npm-install": "npm install",
+    "npm-pack": "npm pack",
+    "npm-version-patch": "npm version patch",
+    "npm-version-minor": "npm version minor",
+    "postversion": "git push origin --all && git push origin --tags",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "liquidjs": "liquidjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xpack-dev-tools/ninja-build-xpack.git/"
+  },
+  "bugs": {
+    "url": "https://github.com/xpack-dev-tools/ninja-build-xpack/issues/"
+  },
+  "homepage": "https://github.com/xpack-dev-tools/ninja-build-xpack#readme",
+  "keywords": [
+    "xpack",
+    "ninja",
+    "build"
+  ],
+  "author": {
+    "name": "Liviu Ionescu",
+    "email": "ilg@livius.net",
+    "url": "https://github.com/ilg-ul/"
+  },
+  "license": "MIT",
+  "xpack": {
+    "minimumXpmRequired": "0.14.0",
+    "binaries": {
+      "destination": "./.content",
+      "baseUrl": "https://github.com/xpack-dev-tools/ninja-build-xpack/releases/download/v1.11.1-2",
+      "skip": 1,
+      "platforms": {
+        "darwin-arm64": {
+          "fileName": "xpack-ninja-build-1.11.1-2-darwin-arm64.tar.gz",
+          "sha256": "cbf57ea055028966107fa377b9e4325e4508308fcc47a238f4d678eb65c094ae"
+        },
+        "darwin-x64": {
+          "fileName": "xpack-ninja-build-1.11.1-2-darwin-x64.tar.gz",
+          "sha256": "915eeff2cb8d106804435bca654cc81b35c935f8cd00be3b84e60d42aa5e8555"
+        },
+        "linux-arm64": {
+          "fileName": "xpack-ninja-build-1.11.1-2-linux-arm64.tar.gz",
+          "sha256": "44e0263a886a75baf4fb56e348326dfb62ae5325c38a2ba02977982ecb1818a8"
+        },
+        "linux-arm": {
+          "fileName": "xpack-ninja-build-1.11.1-2-linux-arm.tar.gz",
+          "sha256": "28f68d64fdcf5fbb2e816dc4ae049c689ebbac6ddb5156bf7c4cf6b36c1d0efd"
+        },
+        "linux-x64": {
+          "fileName": "xpack-ninja-build-1.11.1-2-linux-x64.tar.gz",
+          "sha256": "cfd4c4b815183ef513151b05aa576974fc169164d4a706ca1f1b7c350b66107b"
+        },
+        "win32-x64": {
+          "fileName": "xpack-ninja-build-1.11.1-2-win32-x64.zip",
+          "sha256": "da68e7157bda76cb79c9b86ae00fd1856a24f971fdeab7138ab06ab6882c9d13"
+        }
+      }
+    },
+    "bin": {
+      "ninja": "./.content/bin/ninja"
+    },
+    "devDependencies": {
+      "@xpack-dev-tools/xbb-helper": "^1.4.7"
+    },
+    "properties": {
+      "appName": "Ninja Build",
+      "appLcName": "ninja-build",
+      "platforms": "all",
+      "LIQUIDJS": "liquidjs '{ \"XBB_APPLICATION_NAME\": \"{{ properties.appName }}\", \"XBB_APPLICATION_LOWER_CASE_NAME\": \"{{ properties.appLcName }}\", \"platforms\": \"{{ properties.platforms }}\" }'",
+      "buildFolderRelativePath": "{{ 'build' | path_join: configuration.name | to_filename | downcase }}",
+      "buildFolderRelativePathPosix": "{{ 'build' | path_posix_join: configuration.name | downcase }}",
+      "commandBashBuild": "bash {{ properties.dbg }} scripts/build.sh --target {{ configuration.name }} --build-folder {{ properties.buildFolderRelativePathPosix }}",
+      "xpm-version": "next",
+      "xpm-install-loglevel": "trace",
+      "dbg": ""
+    },
+    "actions": {
+      "deep-clean": [
+        "rm -rf build xpacks node_modules package-lock.json",
+        "rm -rf ${HOME}/Work/{{ properties.appLcName }}-[0-9]*-*"
+      ],
+      "install": [
+        "npm install",
+        "xpm install"
+      ],
+      "link-deps": [
+        "xpm link @xpack-dev-tools/xbb-helper"
+      ],
+      "git-pull-helper": [
+        "git -C ${HOME}/Work/xbb-helper-xpack.git pull"
+      ],
+      "git-log": "git log --pretty='%cd * %h %s' --date=short",
+      "generate-workflows": [
+        "mkdir -p .github/workflows/",
+        "cp xpacks/xpack-dev-tools-xbb-helper/templates/body-github-pre-releases-test.md .github/workflows/",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/build-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/build-all.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/build-xbbli-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/build-xbbli.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/build-xbbla32-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/build-xbbla32.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/build-xbbla64-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/build-xbbla64.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/build-xbbmi-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/build-xbbmi.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/build-xbbma-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/build-xbbma.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/test-prime-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/test-prime.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/test-docker-linux-intel-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/test-docker-linux-intel.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/test-docker-linux-arm-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/test-docker-linux-arm.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/publish-release-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/publish-release.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/test-xpm-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/test-xpm.yml",
+        "cat xpacks/xpack-dev-tools-xbb-helper/templates/deep-clean-liquid.yml | {{ properties.LIQUIDJS }} > .github/workflows/deep-clean.yml",
+        "cp xpacks/xpack-dev-tools-xbb-helper/templates/dot.gitignore .gitignore",
+        "cp xpacks/xpack-dev-tools-xbb-helper/templates/dot.npmignore .npmignore",
+        "cp xpacks/xpack-dev-tools-xbb-helper/templates/build.sh scripts/",
+        "cp xpacks/xpack-dev-tools-xbb-helper/templates/test.sh scripts/"
+      ],
+      "trigger-workflow-build-all": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --xpm-version {{ properties.xpm-version }} --loglevel {{ properties.xpm-install-loglevel }}",
+      "trigger-workflow-build-xbbli": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbli --xpm-version {{ properties.xpm-version }} --loglevel {{ properties.xpm-install-loglevel }}",
+      "trigger-workflow-build-xbbla64": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla64 --xpm-version {{ properties.xpm-version }} --loglevel {{ properties.xpm-install-loglevel }}",
+      "trigger-workflow-build-xbbla32": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbla32 --xpm-version {{ properties.xpm-version }} --loglevel {{ properties.xpm-install-loglevel }}",
+      "trigger-workflow-build-xbbmi": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbmi --xpm-version {{ properties.xpm-version }} --loglevel {{ properties.xpm-install-loglevel }}",
+      "trigger-workflow-build-xbbma": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-build.sh --machine xbbma --xpm-version {{ properties.xpm-version }} --loglevel {{ properties.xpm-install-loglevel }}",
+      "trigger-workflow-test-prime": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-prime.sh",
+      "trigger-workflow-test-docker-linux-intel": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-intel.sh",
+      "trigger-workflow-test-docker-linux-arm": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-docker-linux-arm.sh",
+      "trigger-travis-macos": "bash xpacks/xpack-dev-tools-xbb-helper/travis/trigger-travis-macos.sh",
+      "trigger-workflow-publish-release": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-publish-release.sh",
+      "generate-jekyll-post": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/generate-jekyll-post.sh",
+      "update-package-binaries": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/update-package-binaries.sh",
+      "trigger-workflow-test-xpm": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-test-xpm.sh",
+      "trigger-workflow-deep-clean": "bash xpacks/xpack-dev-tools-xbb-helper/github-actions/trigger-workflow-deep-clean.sh",
+      "test-native": "bash {{ properties.dbg }} scripts/test.sh",
+      "test-pre-release": "bash {{ properties.dbg }} scripts/test.sh --base-url pre-release --develop --cache",
+      "test-xpm": "bash {{ properties.dbg }} scripts/test.sh --xpm",
+      "build-native": "bash {{ properties.dbg }} scripts/build.sh",
+      "build-native-develop": "bash {{ properties.dbg }} scripts/build.sh --develop",
+      "build-native-win": "bash {{ properties.dbg }} scripts/build.sh --windows",
+      "build-native-win-develop": "bash {{ properties.dbg }} scripts/build.sh --develop --windows"
+    },
+    "buildConfigurations": {
+      "common-dependencies": {
+        "hidden": true,
+        "devDependencies": {
+          "@xpack-dev-tools/cmake": "3.23.5-1.1",
+          "@xpack-dev-tools/ninja-build": "1.11.1-2.1",
+          "@xpack-dev-tools/pkg-config": "0.29.2-2.1"
+        }
+      },
+      "common-actions": {
+        "hidden": true,
+        "actions": {
+          "deep-clean": [
+            "rm -rf {{ properties.buildFolderRelativePathPosix }}",
+            "rm -rf ${HOME}/Work/{{ properties.appLcName }}-[0-9]*-*/{{ configuration.name }}"
+          ],
+          "install": "xpm install --config {{ configuration.name }}"
+        }
+      },
+      "common-actions-native": {
+        "hidden": true,
+        "actions": {
+          "build": "{{ properties.commandBashBuild }}",
+          "build-develop": "{{ properties.commandBashBuild }} --develop",
+          "build-develop-tests-only": "{{ properties.commandBashBuild }} --develop --tests-only"
+        }
+      },
+      "common-docker": {
+        "hidden": true,
+        "properties": {
+          "containerName": "{{ properties.appLcName }}-{{ package.version }}-{{ configuration.name }}"
+        },
+        "actions": {
+          "docker-prepare": [
+            "mkdir -pv ${HOME}/.wine",
+            "docker rm --force {{ properties.containerName }}",
+            "docker create --name {{ properties.containerName }} --tty --hostname docker --volume $(pwd):$(pwd) --volume ${HOME}/Work/xbb-helper-xpack.git:${HOME}/Work/xbb-helper-xpack.git --volume ${HOME}/.local/xPacks:${HOME}/.local/xPacks --volume ${HOME}/.cache/xPacks:${HOME}/.cache/xPacks --volume ${HOME}/Work/cache:${HOME}/Work/cache --volume ${HOME}/.wine:${HOME}/.wine --workdir $(pwd) {{ properties.dockerImage }}",
+            "docker start {{ properties.containerName }}",
+            "docker exec {{ properties.containerName }} npm install --location=global xpm@latest",
+            "docker exec {{ properties.containerName }} userdel node",
+            "docker exec {{ properties.containerName }} groupadd --gid $(id -g) --force $(id -gn)",
+            "docker exec {{ properties.containerName }} useradd --home-dir ${HOME} --uid $(id -u) --gid $(id -g) $(id -un)",
+            "docker exec --user $(id -un) {{ properties.containerName }} bash -c 'lsb_release -sd && whoami && pwd && ls -lLA'",
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm install",
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm install --config {{ configuration.name }}"
+          ],
+          "docker-link-deps": [
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm link -C ${HOME}/Work/xbb-helper-xpack.git",
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm run link-deps"
+          ],
+          "docker-build": [
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm run build --config {{ configuration.name }}"
+          ],
+          "docker-build-develop": [
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm run build-develop --config {{ configuration.name }}"
+          ],
+          "docker-build-develop-tests-only": [
+            "docker exec --user $(id -un) {{ properties.containerName }} xpm run build-develop-tests-only --config {{ configuration.name }}"
+          ],
+          "docker-remove": [
+            "docker stop {{ properties.containerName }}",
+            "docker rm {{ properties.containerName }}"
+          ]
+        }
+      },
+      "darwin-x64": {
+        "inherit": [
+          "common-dependencies",
+          "common-actions",
+          "common-actions-native"
+        ],
+        "devDependencies": {
+          "@xpack-dev-tools/clang": "15.0.7-2.1",
+          "@xpack-dev-tools/realpath": "9.1.0-2.1",
+          "@xpack-dev-tools/sed": "4.9.0-2.1"
+        },
+        "actions": {
+          "build": "caffeinate {{ properties.commandBashBuild }}",
+          "build-develop": "caffeinate {{ properties.commandBashBuild }} --develop",
+          "build-develop-tests-only": "caffeinate {{ properties.commandBashBuild }} --develop --tests-only"
+        }
+      },
+      "darwin-arm64": {
+        "inherit": [
+          "darwin-x64"
+        ]
+      },
+      "linux-x64": {
+        "inherit": [
+          "common-dependencies",
+          "common-actions",
+          "common-actions-native",
+          "common-docker"
+        ],
+        "devDependencies": {
+          "@xpack-dev-tools/gcc": "12.2.0-2.1",
+          "@xpack-dev-tools/patchelf": "0.17.2-1.1"
+        },
+        "properties": {
+          "dockerImage": "ilegeul/ubuntu:amd64-18.04-xbb-v5.0.0"
+        }
+      },
+      "linux-arm64": {
+        "inherit": [
+          "linux-x64"
+        ],
+        "properties": {
+          "dockerImage": "ilegeul/ubuntu:arm64v8-18.04-xbb-v5.0.0"
+        }
+      },
+      "linux-arm": {
+        "inherit": [
+          "linux-x64"
+        ],
+        "properties": {
+          "dockerImage": "ilegeul/ubuntu:arm32v7-18.04-xbb-v5.0.0"
+        }
+      },
+      "win32-x64": {
+        "inherit": [
+          "common-dependencies",
+          "common-actions",
+          "common-docker"
+        ],
+        "devDependencies": {
+          "@xpack-dev-tools/gcc": "12.2.0-2.1",
+          "@xpack-dev-tools/mingw-w64-gcc": "12.2.0-1.1",
+          "@xpack-dev-tools/wine": "7.22.0-1.1"
+        },
+        "properties": {
+          "dockerImage": "ilegeul/ubuntu:amd64-18.04-xbb-v5.0.0"
+        },
+        "actions": {
+          "build": "{{ properties.commandBashBuild }} --windows",
+          "build-develop": "{{ properties.commandBashBuild }} --windows --develop",
+          "build-develop-tests-only": "{{ properties.commandBashBuild }} --windows --develop --tests-only"
+        }
+      }
+    }
+  },
+  "bundleDependencies": [],
+  "$devDependenciesUrls": [
+    "https://www.npmjs.com/package/liquidjs"
+  ],
+  "devDependencies": {
+    "liquidjs": "^10.3.3"
+  }
+}
