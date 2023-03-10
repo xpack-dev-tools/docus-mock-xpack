@@ -14,9 +14,10 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        The xPack binaries can be added as development dependencies to projects,
-        and conveniently installed with <code>xpm install</code>, especially
-        useful in CI environments.
+        The xPack binaries can be added to projects
+        as <strong>development dependencies</strong>,
+        and conveniently installed with <code>xpm install</code>, a feature
+        especially useful in CI environments.
       </>
     ),
   },
@@ -25,7 +26,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        By design, multiple versions of the same tools can be installed
+        By design, <strong>multiple versions</strong> of the same tools can be installed
         at the same time on the same system. Most modern platforms are
         supported.
       </>
@@ -47,6 +48,7 @@ const FeatureList: FeatureItem[] = [
 function Feature({title, Svg, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
+
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
