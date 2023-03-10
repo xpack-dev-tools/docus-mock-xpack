@@ -1,8 +1,6 @@
 ---
 title:  xPack Ninja Build v1.11.1-2 released
 
-TODO: select one summary
-
 summary: "Version **1.11.1-2** is a maintenance release, built with the latest build scripts."
 
 ninja_version: 1.11.1
@@ -12,6 +10,7 @@ npm_subversion: 1
 download_url: https://github.com/xpack-dev-tools/ninja-build-xpack/releases/tag/v1.11.1-2/
 
 date:   2023-01-24 00:51:02 +0200
+authors: ilg-ul
 
 comments: true
 
@@ -29,6 +28,12 @@ tags:
 
 ---
 
+Version **1.11.1-2** is a maintenance release, built with the latest build scripts.
+
+{params.title}
+
+<!--truncate-->
+
 [The xPack Ninja Build](https://xpack.github.io/dev-tools/ninja-build/)
 is a standalone cross-platform binary distribution of
 [Ninja Build](https://ninja-build.org).
@@ -37,13 +42,17 @@ There are separate binaries for **Windows** (Intel 64-bit),
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
 and **GNU/Linux** (Intel 64-bit, Arm 32/64-bit).
 
-{% include note.html content="The main targets for the Arm binaries
+:::note
+
+The main targets for the Arm binaries
 are the **Raspberry Pi** class devices (armv7l and aarch64;
-armv6 is not supported)." %}
+armv6 is not supported).
+
+:::
 
 ## Download
 
-The binary files are available from GitHub [Releases]({{ page.download_url }}).
+The binary files are available from GitHub [Releases]({ download_url }).
 
 ## Prerequisites
 
