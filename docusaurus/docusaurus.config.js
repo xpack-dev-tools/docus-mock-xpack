@@ -64,9 +64,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Docus Mock',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Docus Mock Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -78,8 +78,18 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://xpack.github.io/',
+            label: 'xPack',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/xpack-dev-tools/docus-mock-xpack/',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/xpack-dev-tools/',
+            label: 'Org',
             position: 'right',
           },
         ],
@@ -101,15 +111,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/xpack',
               },
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.gg/kbzWaJerFG',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/xpack_project',
               },
             ],
           },
@@ -127,7 +137,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Liviu Ionescu. Built with <a href=https://docusaurus.io>Docusaurus</a>.`,
       },
       prism: {
         theme: lightCodeTheme,
