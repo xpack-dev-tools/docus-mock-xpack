@@ -67,7 +67,7 @@ const config = {
         title: 'The xPack Project',
         logo: {
           alt: 'Docus Mock Logo',
-          src: 'img/components-256',
+          src: 'img/components-256.png',
         },
         items: [
           {
