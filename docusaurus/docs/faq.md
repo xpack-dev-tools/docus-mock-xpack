@@ -1,14 +1,11 @@
 ---
-title: The xPack Ninja Build Frequently Asked Questions
-permalink: /dev-tools/ninja-build/faq/
+title: The xPack Docus Mock Frequently Asked Questions
 
 comments: true
 toc: false
 
 date: 2020-09-28 17:49:00 +0300
 
-redirect_from:
-  - /ninja-build/faq/
 
 ---
 

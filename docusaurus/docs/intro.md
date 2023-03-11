@@ -1,47 +1,90 @@
 ---
-sidebar_position: 1
+title: The xPack Docus Mock
+
+summary: "A binary distribution of Docus Mock."
+
+keywords: [ninja-build]
+
+comments: true
+
+date: 2020-09-28 17:49:00 +0300
+
 ---
 
-# Tutorial Intro
+## Quicklinks
 
-Let's discover **Docusaurus in less than 5 minutes**.
+If you already know the general facts about the xPack Docus Mock, you can
+directly skip to the desired pages.
 
-## Getting Started
+User pages:
 
-Get started by **creating a new site**.
+- [install](/docs/install/)
+- [support](/docs/support/)
+- [releases](/docs/releases/)
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Developer & maintainer pages:
 
-### What you'll need
+- [GitHub](https://github.com/xpack-dev-tools/ninja-build-xpack/)
+- [README-MAINTAINER](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-MAINTAINER.md)
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Overview
 
-## Generate a new site
+The **xPack Docus Mock** is a cross-platform binary distribution of the
+[Ninja](https://ninja-build.org) build system,
+an open source project hosted on
+[GitHub](https://github.com/ninja-build/ninja/).
 
-Generate a new Docusaurus site using the **classic template**.
+## Benefits
 
-The classic template will automatically be added to your project after you run the command:
+The main advantages of using the **xPack Docus Mock** are:
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- a convenient, uniform and portable install/uninstall/upgrade procedure,
+  the same procedure is used for all major
+  platforms (Intel Windows 64-bit, Intel GNU/Linux 64-bit, Arm GNU/Linux
+  64/32-bit, Intel macOS 64-bit, Apple Silicon macOS 64-bit)
+- a better integration with development environments
+- a more convenient integration with CI environment
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+All binaries are self-contained, they include all required libraries,
+and can be installed in any location.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+## Compatibility
 
-## Start your site
+The **xPack Docus Mock** is fully compatible with the original **Ninja**
+distribution.
 
-Run the development server:
+## Install
 
-```bash
-cd my-website
-npm run start
-```
+The details of installing the **xPack Docus Mock** on various platforms are
+presented in the separate
+[install](/docs/install/) page.
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## Documentation
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+The original Ninja documentation is available in the installed folders:
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- https://ninja-build.org/manual.html
+
+## Support
+
+For the various support options, please read the separate
+[support](/docs/support/) page.
+
+## Change log
+
+The release and change log is available in the repository
+[`CHANGELOG.md`](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/CHANGELOG.md) file.
+
+## Build details
+
+For those interested in building the binaries, please read the
+[README-MAINTAINER](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-MAINTAINER.md)
+page.
+However, the ultimate source for details are the build scripts themselves,
+all available from the
+[`ninja-build-xpack.git/scripts`](https://github.com/xpack-dev-tools/ninja-build-xpack/tree/xpack/scripts/)
+folder.
+
+## Releases
+
+See the [releases](/docs/releases/) pages.

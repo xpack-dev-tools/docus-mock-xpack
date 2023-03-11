@@ -1,6 +1,5 @@
 ---
-title: How to install the xPack Ninja Build binaries
-permalink: /dev-tools/ninja-build/install/
+title: How to install the xPack Docus Mock binaries
 
 summary: "The recommended method is via xpm."
 
@@ -12,14 +11,11 @@ toc: false
 
 date: 2020-09-27 11:09:00 +0300
 
-redirect_from:
-  - /ninja-build/install/
-
 ---
 
 ## Overview
 
-The **xPack Ninja Build** can be installed automatically, via `xpm` (the
+The **xPack Docus Mock** can be installed automatically, via `xpm` (the
 recommended method), or manually, by downloading and unpacking one of the
 portable archives.
 
@@ -92,7 +88,7 @@ xpm uninstall --global @xpack-dev-tools/ninja-build --verbose
 
 ## Manual install
 
-For all platforms, the **xPack Ninja Build** binaries are released as portable
+For all platforms, the **xPack Docus Mock** binaries are released as portable
 archives that can be installed in any location.
 
 The archives can be downloaded from the
@@ -118,7 +114,7 @@ C:\>%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\ninja-build\{{ page.ve
 
 ### Download
 
-The Windows versions of **xPack Ninja Build**
+The Windows versions of **xPack Docus Mock**
 are packed as ZIP files.
 Download the latest version named like:
 
@@ -130,7 +126,7 @@ The `win32` part is confusing, but we have to leave with it." %}
 
 ### Unpack
 
-To manually install the xPack Ninja Build,
+To manually install the xPack Docus Mock,
 unpack the archive and copy it into the
 `%USERPROFILE%\AppData\Roaming\xPacks\ninja-build`
 (for example `C:\Users\ilg\AppData\Roaming\xPacks\ninja-build`) folder;
@@ -170,7 +166,7 @@ $ ~/.local/xPacks/@xpack-dev-tools/ninja-build/{{ page.version }}-{{ page.xpack-
 
 ### Download
 
-The macOS versions of **xPack Ninja Build**
+The macOS versions of **xPack Docus Mock**
 are packed as `.tar.gz` archives.
 Download the latest version named like:
 
@@ -179,7 +175,7 @@ Download the latest version named like:
 
 ### Unpack
 
-To manually install the xPack Ninja Build,
+To manually install the xPack Docus Mock,
 unpack the archive and move it to
 `~/.local/xPacks/ninja-build/xpack-ninja-build-{{ page.version }}-{{ page.xpack-subversion }}`:
 
@@ -239,7 +235,7 @@ $ ~/.local/xPacks/@xpack-dev-tools/ninja-build/{{ page.version }}-{{ page.xpack-
 
 ### Download
 
-The GNU/Linux versions of **xPack Ninja Build**
+The GNU/Linux versions of **xPack Docus Mock**
 are packed as `.tar.gz` archives.
 Download the latest version named like:
 
@@ -252,7 +248,7 @@ Ubuntu, but can be executed on most recent GNU/Linux distributions.
 
 ### Unpack
 
-To manually install the xPack Ninja Build,
+To manually install the xPack Docus Mock,
 unpack the archive and move it to
 `~/.local/xPacks/ninja-build/xpack-ninja-build-{{ page.version }}-{{ page.xpack-subversion }}`:
 

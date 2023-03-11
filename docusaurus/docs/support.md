@@ -1,13 +1,9 @@
 ---
-title: How to get help for xPack Ninja Build
-permalink: /dev-tools/ninja-build/support/
+title: How to get help for xPack Docus Mock
 
 comments: true
 
 date: 2020-09-28 17:54:00 +0300
-
-redirect_from:
-  - /ninja-build/support/
 
 ---
 
@@ -50,7 +46,7 @@ and enter a **New discussion** in the **Q&A** category.
 
 If you are convinced that you identified a bug related to the binary
 distribution, not Ninja itself (if you have doubts, use the GitHub Discussions),
-or you have a pertinent suggestion how to enhance the **xPack Ninja Build**
+or you have a pertinent suggestion how to enhance the **xPack Docus Mock**
 distribution, register a **New Issue** in the GitHub
 [Issues](https://github.com/xpack-dev-tools/ninja-build-xpack/issues/)
 tracker.

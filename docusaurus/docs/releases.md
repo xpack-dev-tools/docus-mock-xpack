@@ -1,6 +1,6 @@
 ---
-title: The xPack Ninja Build releases
-permalink: /dev-tools/ninja-build/releases/
+title: The xPack Docus Mock releases
+# permalink: /dev-tools/ninja-build/releases/
 
 search: exclude
 github_editme: false
