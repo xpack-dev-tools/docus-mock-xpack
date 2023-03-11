@@ -1,5 +1,5 @@
 ---
-title:  xPack Ninja Build v1.11.1-2 released
+title:  xPack Docus Mock v1.11.1-2 released
 
 summary: "Version **1.11.1-2** is a maintenance release, built with the latest build scripts."
 
@@ -30,13 +30,11 @@ tags:
 
 Version **1.11.1-2** is a maintenance release, built with the latest build scripts.
 
-{params.title}
-
 <!--truncate-->
 
-[The xPack Ninja Build](https://xpack.github.io/dev-tools/ninja-build/)
+[The xPack Docus Mock](https://xpack.github.io/dev-tools/ninja-build/)
 is a standalone cross-platform binary distribution of
-[Ninja Build](https://ninja-build.org).
+[Docus Mock](https://ninja-build.org).
 
 There are separate binaries for **Windows** (Intel 64-bit),
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
@@ -52,7 +50,7 @@ armv6 is not supported).
 
 ## Download
 
-The binary files are available from GitHub [Releases]({ download_url }).
+The binary files are available from GitHub <a href={ frontMatter.download_url }>Releases</a>.
 
 ## Prerequisites
 
@@ -70,14 +68,14 @@ The binary files are available from GitHub [Releases]({ download_url }).
 
 ## Install
 
-The full details of installing the **xPack Ninja Build** on various platforms
+The full details of installing the **xPack Docus Mock** on various platforms
 are presented in the separate
-[Install]({{ site.baseurl }}/dev-tools/ninja-build/install/) page.
+[Install](/docs/install/) page.
 
 ### Easy install
 
-The easiest way to install Ninja Build is with
-[`xpm`]({{ site.baseurl }}/xpm/)
+The easiest way to install Docus Mock is with
+[`xpm`](https://xpack.github.io/xpm/)
 by using the **binary xPack**, available as
 [`@xpack-dev-tools/ninja-build`](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
@@ -86,7 +84,7 @@ With the `xpm` tool available, installing
 the latest version of the package and adding it as
 a dependency for a project is quite easy:
 
-```sh
+```bash
 cd my-project
 xpm init # Only at first use.
 
@@ -97,9 +95,9 @@ ls -l xpacks/.bin
 
 To install this specific version, use:
 
-```sh
-xpm install @xpack-dev-tools/ninja-build@{{ page.version }}.{{ page.npm_subversion }}
-```
+<pre className="language-bash">
+xpm install @xpack-dev-tools/ninja-build@{frontMatter.version}.{frontMatter.npm_subversion}
+</pre>
 
 It is also possible to install Meson Build globally, in the user home folder,
 but this requires xPack aware tools to automatically identify them and
@@ -127,13 +125,14 @@ xpm uninstall --global @xpack-dev-tools/ninja-build
 
 ## Compliance
 
-The xPack Ninja Build generally follows the official
-[Ninja Build](https://ninja-build.org) releases.
+The xPack Docus Mock generally follows the official
+[Docus Mock](https://ninja-build.org) releases.
 
 The current version is based on:
 
-- Ninja Build version {{ page.ninja_version }}
-from {{ page.ninja_date }}.
+<ul>
+<li>Docus Mock version { frontMatter.ninja_version } from { frontMatter.ninja_date }.</li>
+</ul>
 
 ## Changes
 
