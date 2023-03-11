@@ -11,22 +11,6 @@ date: 2020-09-28 17:49:00 +0300
 
 ---
 
-## Quicklinks
-
-If you already know the general facts about the xPack Docus Mock, you can
-directly skip to the desired pages.
-
-User pages:
-
-- [install](/docs/install/)
-- [support](/docs/support/)
-- [releases](/docs/releases/)
-
-Developer & maintainer pages:
-
-- [GitHub](https://github.com/xpack-dev-tools/ninja-build-xpack/)
-- [README-MAINTAINER](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-MAINTAINER.md)
-
 ## Overview
 
 The **xPack Docus Mock** is a cross-platform binary distribution of the
