@@ -29,6 +29,16 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* For the home page xpm install field */
 p.hero__code code  {
   color: var(--ifm-font-color-base)
+}
+
+/* Reduce size of blog titles (H2 is 2rem) */
+.title_f1Hy {
+  font-size: 2.5rem; /* 3rem; */
+}
+
+.markdown h1:first-child {
+  --ifm-h1-font-size: 2.5em
 }
