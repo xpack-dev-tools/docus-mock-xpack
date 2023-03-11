@@ -26,7 +26,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        By design, <strong>multiple versions</strong> of the same tools can be installed
+        By design, <strong>multiple versions</strong> of the same tool
+        can be installed
         at the same time on the same system. Most modern platforms are
         supported.
       </>
@@ -38,8 +39,8 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         The <code>xpm</code> tool is an extension of <code>npm</code>, and
-        xPacks nicely integrate into the Node.js ecosystem, while also
-        allowing manual package installs.
+        binary xPacks nicely integrate into the Node.js ecosystem, while still
+        allowing to install the archives manually.
       </>
     ),
   },
