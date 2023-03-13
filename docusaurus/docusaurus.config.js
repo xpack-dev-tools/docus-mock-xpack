@@ -68,6 +68,8 @@ const config = {
         logo: {
           alt: 'Docus Mock Logo',
           src: 'img/components-256.png',
+          href: 'https://xpack.github.io',
+          target: '_self',
         },
         items: [
           {
