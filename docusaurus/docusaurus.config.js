@@ -68,7 +68,7 @@ const config = {
         logo: {
           alt: 'Docus Mock Logo',
           src: 'img/components-256.png',
-          href: 'https://xpack.github.io',
+          href: 'https://xpack.github.io/',
           target: '_self',
         },
         items: [
@@ -80,8 +80,8 @@ const config = {
           {
             type: 'doc',
             docId: 'overview',
-            position: 'left',
-            label: 'Docs'
+            label: 'Docs',
+            position: 'left'
           },
           {
             to: '/blog',
