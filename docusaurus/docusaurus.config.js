@@ -74,7 +74,8 @@ const config = {
         items: [
           {
             to: '/',
-            label: 'Home',
+            // label: 'Home',
+            className: 'header-home-link',
             position: 'left'
           },
           {
