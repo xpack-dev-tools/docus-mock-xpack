@@ -89,18 +89,13 @@ const config = {
             position: 'left'
           },
           {
-            href: 'https://xpack.github.io/',
-            label: 'xPack',
-            position: 'right',
-          },
-          {
             href: 'https://github.com/xpack-dev-tools/docus-mock-xpack/',
             label: 'GitHub',
             position: 'right',
           },
           {
             href: 'https://github.com/xpack-dev-tools/',
-            label: 'Org',
+            label: 'GitHub Org',
             position: 'right',
           },
         ],
@@ -151,9 +146,13 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/xpack-dev-tools/docus-mock-xpack/',
               },
-            ],
+              {
+                label: 'GitHub Org',
+                href: 'https://github.com/xpack-dev-tools/',
+              },
+                ],
           },
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Liviu Ionescu. Built with <a href=https://docusaurus.io>Docusaurus</a>.`,
