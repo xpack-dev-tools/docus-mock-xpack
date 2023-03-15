@@ -21,3 +21,17 @@
   align-items: center;
   justify-content: center;
 }
+
+/* -------------------------------------------------------------------------- */
+
+/** Reduce the width of the install code */
+.installWithCopy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.installWithCopy > div > div {
+  padding: 0 2em;
+}
+
+/* -------------------------------------------------------------------------- */
