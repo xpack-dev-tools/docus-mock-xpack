@@ -25,7 +25,7 @@ const sidebars = {
     },
     {
       type: 'doc',
-      id: 'install',
+      id: 'install/index',
       label: 'Install'
     },
     {
