@@ -1,8 +1,8 @@
 
 ## Easy install
 
-The easiest way to install Ninja is by using the **binary xPack**, available as
-[`@xpack-dev-tools/ninja-build`](https://www.npmjs.com/package/@xpack-dev-tools/ninja-build)
+The easiest way to install Docus Mock is by using the **binary xPack**, available as
+[`@xpack-dev-tools/docus-mock`](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock)
 from the [`npmjs.com`](https://www.npmjs.com) registry.
 
 ### Prerequisites
@@ -22,7 +22,7 @@ the latest version of the package is quite easy:
 cd my-project
 xpm init # Only at first use.
 
-xpm install @xpack-dev-tools/ninja-build@latest --verbose
+xpm install @xpack-dev-tools/docus-mock@latest --verbose
 ```
 
 This command will always install the latest available version,
@@ -51,11 +51,11 @@ To remove the links from the current project:
 ```sh
 cd my-project
 
-xpm uninstall @xpack-dev-tools/ninja-build
+xpm uninstall @xpack-dev-tools/docus-mock
 ```
 
 To completely remove the package from the global store:
 
 ```sh
-xpm uninstall --global @xpack-dev-tools/ninja-build --verbose
+xpm uninstall --global @xpack-dev-tools/docus-mock --verbose
 ```

@@ -22,7 +22,7 @@
   "homepage": "https://github.com/xpack-dev-tools/docus-mock-xpack#readme",
   "keywords": [
     "xpack",
-    "ninja",
+    "docus-mock",
     "build"
   ],
   "author": {
@@ -65,7 +65,7 @@
       }
     },
     "bin": {
-      "ninja": "./.content/bin/ninja"
+      "docus-mock": "./.content/bin/docus-mock"
     },
     "devDependencies": {
       "@xpack-dev-tools/xbb-helper": "^1.4.7"

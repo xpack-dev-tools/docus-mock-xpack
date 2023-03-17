@@ -10,28 +10,28 @@ date: 2020-09-28 17:54:00 +0300
 ## Quicklinks
 
 The quick answer is to use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/ninja-build-xpack/discussions/).
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/).
 
 ## Check the documentation
 
 The original documentation is available from:
 
-- https://ninja-build.org/manual.html
+- https://docus-mock.org/manual.html
 
 ## Check the FAQ
 
-Check the [FAQ]({{ site.baseurl }}/dev-tools/ninja-build/faq/)
+Check the [FAQ]({{ site.baseurl }}/dev-tools/docus-mock/faq/)
 for similar problems.
 
 ## Check the GitHub Discussions
 
-Check the GitHub [Discussions](https://github.com/xpack-dev-tools/ninja-build-xpack/discussions/) for
+Check the GitHub [Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/) for
 similar problems.
 
 ## Check the GitHub Issues
 
 Check the GitHub
-[Issues](https://github.com/xpack-dev-tools/ninja-build-xpack/issues/)
+[Issues](https://github.com/xpack-dev-tools/docus-mock-xpack/issues/)
 tracker for similar problems.
 
 ## Ask questions in GitHub Discussions
@@ -39,16 +39,16 @@ tracker for similar problems.
 If you still could not find a solution, if you have interesting use
 cases, if you have custom configurations, and generally if you have
 any experience that you want to share with others, use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/ninja-build-xpack/discussions/),
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/),
 and enter a **New discussion** in the **Q&A** category.
 
 ## Register a new support ticket only if necessary
 
 If you are convinced that you identified a bug related to the binary
-distribution, not Ninja itself (if you have doubts, use the GitHub Discussions),
+distribution, not Docus Mock itself (if you have doubts, use the GitHub Discussions),
 or you have a pertinent suggestion how to enhance the **xPack Docus Mock**
 distribution, register a **New Issue** in the GitHub
-[Issues](https://github.com/xpack-dev-tools/ninja-build-xpack/issues/)
+[Issues](https://github.com/xpack-dev-tools/docus-mock-xpack/issues/)
 tracker.
 
 {% include tip.html content="**DO NOT** use the GitHub Issues tracker
@@ -58,7 +58,7 @@ for questions and support, **use the GitHub Discussions**." %}
 
 {% include important.html content="Please, please, please: **do not use
 private e-mail** for support, **use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/ninja-build-xpack/discussions/)**." %}
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/)**." %}
 
 Sending private messages will be automatically replied with
 a link to this page.

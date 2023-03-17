@@ -3,7 +3,7 @@ title: The xPack Docus Mock
 
 summary: "A binary distribution of Docus Mock."
 
-keywords: [ninja-build]
+keywords: [docus-mock]
 
 comments: true
 
@@ -14,9 +14,9 @@ date: 2020-09-28 17:49:00 +0300
 ## Overview
 
 The **xPack Docus Mock** is a cross-platform binary distribution of the
-[Ninja](https://ninja-build.org) build system,
+[Docus Mock](https://docus-mock.org) build system,
 an open source project hosted on
-[GitHub](https://github.com/ninja-build/ninja/).
+[GitHub](https://github.com/docus-mock/docus-mock/).
 
 ## Benefits
 
@@ -34,7 +34,7 @@ and can be installed in any location.
 
 ## Compatibility
 
-The **xPack Docus Mock** is fully compatible with the original **Ninja**
+The **xPack Docus Mock** is fully compatible with the original **Docus Mock**
 distribution.
 
 ## Install
@@ -45,9 +45,9 @@ presented in the separate
 
 ## Documentation
 
-The original Ninja documentation is available in the installed folders:
+The original Docus Mock documentation is available in the installed folders:
 
-- https://ninja-build.org/manual.html
+- https://docus-mock.org/manual.html
 
 ## Support
 
@@ -57,16 +57,16 @@ For the various support options, please read the separate
 ## Change log
 
 The release and change log is available in the repository
-[`CHANGELOG.md`](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/CHANGELOG.md) file.
+[`CHANGELOG.md`](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/CHANGELOG.md) file.
 
 ## Build details
 
 For those interested in building the binaries, please read the
-[README-MAINTAINER](https://github.com/xpack-dev-tools/ninja-build-xpack/blob/xpack/README-MAINTAINER.md)
+[README-MAINTAINER](https://github.com/xpack-dev-tools/docus-mock-xpack/blob/xpack/README-MAINTAINER.md)
 page.
 However, the ultimate source for details are the build scripts themselves,
 all available from the
-[`ninja-build-xpack.git/scripts`](https://github.com/xpack-dev-tools/ninja-build-xpack/tree/xpack/scripts/)
+[`docus-mock-xpack.git/scripts`](https://github.com/xpack-dev-tools/docus-mock-xpack/tree/xpack/scripts/)
 folder.
 
 ## Releases
