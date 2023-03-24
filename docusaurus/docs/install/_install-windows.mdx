@@ -9,8 +9,8 @@ import InstallManual from './_install-manual.md';
 To check if the xpm installed Docus Mock starts, use something like:
 
 <pre>
-C:\>%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\docus-mock\{ frontMatter.version }-{ frontMatter.xpack_subversion }.1\.content\bin\docus-mock.exe --version
-{ frontMatter.version }
+C:\>%USERPROFILE%\AppData\Roaming\xPacks\@xpack-dev-tools\docus-mock\{ props.version }-{ props.xpack_subversion }.1\.content\bin\docus-mock.exe --version
+{ props.version }
 </pre>
 
 <InstallManual/>
@@ -22,7 +22,7 @@ are packed as ZIP files.
 Download the latest version named like:
 
 <ul>
-<li><code>xpack-docus-mock-{ frontMatter.version }-{ frontMatter.xpack_subversion }-win32-x64.zip</code></li>
+<li><code>xpack-docus-mock-{ props.version }-{ props.xpack_subversion }-win32-x64.zip</code></li>
 </ul>
 
 :::info
@@ -52,6 +52,7 @@ and `.content` to store the unpacked archive.
 To check if the manually installed Docus Mock starts, use something like:
 
 <pre>
-C:\>%USERPROFILE%\AppData\Roaming\xPacks\docus-mock\xpack-docus-mock-{ frontMatter.version }-{ frontMatter.xpack_subversion }\bin\docus-mock.exe --version
-{ frontMatter.version }
+C:\>%USERPROFILE%\AppData\Roaming\xPacks\docus-mock\xpack-docus-mock-{ props.version }-{ props.xpack_subversion }\bin\docus-mock.exe --version
+<br/>
+{ props.version }
 </pre>
