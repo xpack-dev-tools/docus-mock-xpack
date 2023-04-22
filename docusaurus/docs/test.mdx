@@ -9,6 +9,8 @@ something: Some text
 import CodeBlock from '@theme/CodeBlock';
 
 export const world = 'World'
+export const version = "11.2.1"
+export const xpackSubversion = "1.2"
 
 {description} {something}
 
@@ -111,6 +113,21 @@ const visit = require('unist-util-visit');
 - <https://github.com/FormidableLabs/prism-react-renderer>
 - <https://github.com/FormidableLabs/prism-react-renderer/blob/master/packages/generate-prism-languages/index.ts>
 
+---
 
+<pre><code className="language-console">{
+`$ tree -L 2 /home/ilg/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-${ version }-${ xpackSubversion }
+/home/ilg/.local/xPacks/arm-none-eabi-gcc/xpack-arm-none-eabi-gcc-${ version }-${ xpackSubversion }
+├── arm-none-eabi
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   └── share
+├── README.md
+└── share
+    ├── doc
+    └── gcc-arm-none-eabi
 
+21 directories, 62 files
+`}</code></pre>
 

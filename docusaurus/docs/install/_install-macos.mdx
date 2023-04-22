@@ -8,11 +8,10 @@ import InstallManual from './_install-manual.md';
 
 To check if the xpm installed Docus Mock starts, use something like:
 
-<pre>
-$ ~/.local/xPacks/@xpack-dev-tools/docus-mock/{ props.version }-{ props.xpack_subversion }.1/.content/bin/docus-mock --version
-<br/>
-{ props.version }
-</pre>
+<pre><code className="language-console">{
+`$ ~/.local/xPacks/@xpack-dev-tools/docus-mock/${ props.version }-${ props.xpack_subversion }.1/.content/bin/docus-mock --version
+${ props.version }
+`}</code></pre>
 
 <InstallManual/>
 
@@ -33,13 +32,13 @@ Download the latest version named like:
 <p>To manually install the xPack Docus Mock,
 unpack the archive and move it to <code>~/.local/xPacks/docus-mock/xpack-docus-mock-{ props.version }-{ props.xpack_subversion }</code>:</p>
 
-```bash
-mkdir -p ~/.local/xPacks/docus-mock
+<pre><code className="language-console">{
+`mkdir -p ~/.local/xPacks/docus-mock
 cd ~/.local/xPacks/docus-mock
 
-tar xvf ~/Downloads/xpack-docus-mock-{ props.version }-{ props.xpack_subversion }-darwin-x64.tar.gz
-chmod -R -w xpack-docus-mock-{ props.version }-{ props.xpack_subversion }
-```
+tar xvf ~/Downloads/xpack-docus-mock-${ props.version }-${ props.xpack_subversion }-darwin-x64.tar.gz
+chmod -R -w xpack-docus-mock-${ props.version }-${ props.xpack_subversion }
+`}</code></pre>
 
 :::info
 For manual installs, the recommended
@@ -48,9 +47,9 @@ install location is different from the xpm install folders.
 
 The result is a structure like:
 
-```bash
-$ tree -L 2 /Users/ilg/.local/xPacks/docus-mock/xpack-docus-mock-{ props.version }-{ props.xpack_subversion }
-/Users/ilg/.local/xPacks/docus-mock/xpack-docus-mock-{ props.version }-{ props.xpack_subversion }/
+<pre><code className="language-console">{
+`$ tree -L 2 /Users/ilg/.local/xPacks/docus-mock/xpack-docus-mock-${ props.version }-${ props.xpack_subversion }
+/Users/ilg/.local/xPacks/docus-mock/xpack-docus-mock-${ props.version }-${ props.xpack_subversion }/
 ├── README.md
 ├── bin
 │   └── docus-mock
@@ -61,13 +60,13 @@ $ tree -L 2 /Users/ilg/.local/xPacks/docus-mock/xpack-docus-mock-{ props.version
     └── scripts
 
 5 directories, 3 files
-```
+`}</code></pre>
 
 ### Test
 
 To check if the manually installed Docus Mock starts, use something like:
 
-<pre>
-$ ~/.local/xPacks/docus-mock/{ props.version }-{ props.xpack_subversion }/bin/docus-mock --version
-{ props.version }
-</pre>
+<pre><code className="language-console">{
+`$ ~/.local/xPacks/docus-mock/${ props.version }-${ props.xpack_subversion }/bin/docus-mock --version
+${ props.version }
+`}</code></pre>
