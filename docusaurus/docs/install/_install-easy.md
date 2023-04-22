@@ -15,7 +15,7 @@ follow the instructions from the
 
 ### Install
 
-With xpm available, installing
+With **xpm** available, installing
 the latest version of the package is quite easy:
 
 ```sh
