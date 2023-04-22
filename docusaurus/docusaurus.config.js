@@ -162,6 +162,7 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // https://docusaurus.io/docs/api/themes/configuration
       colorMode: {
         respectPrefersColorScheme: true,
       },
