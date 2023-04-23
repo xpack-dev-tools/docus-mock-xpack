@@ -42,8 +42,11 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+            'https://github.com/xpack-dev-tools/docus-mock-xpack/edit/xpack/website/',
+          showLastUpdateAuthor: true,
+          // Equivalent to `enableUpdateTime`.
+          showLastUpdateTime: true,
+          },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -91,12 +94,13 @@ const config = {
           },
           {
             href: 'https://github.com/xpack-dev-tools/docus-mock-xpack/',
-            label: 'GitHub',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
           {
             href: 'https://github.com/xpack-dev-tools/',
-            label: 'GitHub Org',
+            label: 'xpack-dev-tools',
             position: 'right',
           },
         ],
@@ -150,7 +154,7 @@ const config = {
                 href: 'https://github.com/xpack-dev-tools/docus-mock-xpack/',
               },
               {
-                label: 'GitHub Org',
+                label: 'xpack-dev-tools',
                 href: 'https://github.com/xpack-dev-tools/',
               },
                 ],
