@@ -4,7 +4,7 @@ author: An author
 description: A short description
 slug: /test
 
-something: Some text
+something: "Some text"
 ---
 import CodeBlock from '@theme/CodeBlock';
 
@@ -12,7 +12,13 @@ export const world = 'World'
 export const version = "11.2.1"
 export const xpackSubversion = "1.2"
 
-{description} {something}
+{description}
+
+{something}
+
+{frontMatter.something}
+
+<p>abc { frontMatter.something } cde</p>
 
 Hello {world}!
 
