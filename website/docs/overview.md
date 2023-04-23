@@ -14,9 +14,14 @@ date: 2020-09-28 17:49:00 +0300
 ## Overview
 
 The **xPack Docus Mock** is a cross-platform binary distribution of the
-[Docus Mock](https://docus-mock.org) build system,
+[Docus Mock](https://docus-mock.org),
 an open source project hosted on
 [GitHub](https://github.com/docus-mock/docus-mock/).
+
+## Features
+
+All binaries are **self-contained** (include all required libraries) and **file-system relocatable**
+(can be installed in any location). Multiple versions can be installed on the same system, for each project.
 
 ## Benefits
 
@@ -24,13 +29,13 @@ The main advantages of using the **xPack Docus Mock** are:
 
 - a convenient, uniform and portable install/uninstall/upgrade procedure,
   the same procedure is used for all major
-  platforms (Intel Windows 64-bit, Intel GNU/Linux 64-bit, Arm GNU/Linux
-  64/32-bit, Intel macOS 64-bit, Apple Silicon macOS 64-bit)
-- a better integration with development environments
-- a more convenient integration with CI environment
-
-All binaries are self-contained, they include all required libraries,
-and can be installed in any location.
+  platforms (**Intel Windows** 64-bit,
+  **Intel GNU/Linux** 64-bit,
+  **Arm GNU/Linux** 64/32-bit,
+  **Intel macOS** 64-bit,
+  **Apple Silicon macOS** 64-bit)
+- a good integration with development environments (no Docker images)
+- a simplifying solution for **CI** environment
 
 ## Compatibility
 
@@ -41,7 +46,7 @@ distribution.
 
 The details of installing the **xPack Docus Mock** on various platforms are
 presented in the separate
-[install](/docs/install/) page.
+[Install](/docs/install/) page.
 
 ## Documentation
 
@@ -52,7 +57,7 @@ The original Docus Mock documentation is available in the installed folders:
 ## Support
 
 For the various support options, please read the separate
-[support](/docs/support/) page.
+[Support](/docs/support/) page.
 
 ## Change log
 
@@ -71,4 +76,4 @@ folder.
 
 ## Releases
 
-See the [releases](/docs/releases/) pages.
+The list of releases is available in the [Releases](/docs/releases/) pages.
