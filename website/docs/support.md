@@ -10,27 +10,21 @@ date: 2020-09-28 17:54:00 +0300
 ## Quick links
 
 The quick answer is to use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/).
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/) pages.
 
-## Check the documentation
+## Preliminary checks
 
-The original documentation is available from:
+Before posting any questions, check if the subject was not
+already addressed.
 
-- https://docus-mock.org/manual.html
-
-## Check the FAQ
-
-Check the [FAQ](/docs/faq/)
-for similar problems.
-
-## Check the GitHub Discussions
-
-Check the GitHub [Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/) for
-similar problems.
-
-## Check the GitHub Issues
-
-Check the GitHub
+- check the documentation.
+    The original documentation is available from:
+    - https://docus-mock.org/manual.html
+- check the [FAQ](/docs/faq/)
+for similar problems
+- check the GitHub [Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/) for
+similar problems
+- check the GitHub
 [Issues](https://github.com/xpack-dev-tools/docus-mock-xpack/issues/)
 tracker for similar problems.
 
@@ -40,7 +34,7 @@ If you still could not find a solution, if you have interesting use
 cases, if you have custom configurations, and generally if you have
 any experience that you want to share with others, use the GitHub
 [Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/) pages,
-and enter a **New discussion** in the **Q&A** category.
+and enter a **New discussion**; use the **Q&A** category for questions.
 
 ## Register a new support ticket only if necessary
 
@@ -54,7 +48,8 @@ tracker.
 :::tip
 
 **Do not** use the GitHub Issues tracker
-for questions and support, **use the GitHub Discussions** pages.
+for questions and support, **use the GitHub
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/)** pages.
 
 :::
 
