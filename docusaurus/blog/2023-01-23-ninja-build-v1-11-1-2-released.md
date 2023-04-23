@@ -39,7 +39,7 @@ There are separate binaries for **Windows** (Intel 64-bit),
 **macOS** (Intel 64-bit, Apple Silicon 64-bit)
 and **GNU/Linux** (Intel 64-bit, Arm 32/64-bit).
 
-:::note
+:::note Raspberry Pi
 
 The main targets for the Arm binaries
 are the **Raspberry Pi** class devices (armv7l and aarch64;
@@ -83,7 +83,7 @@ With the `xpm` tool available, installing
 the latest version of the package and adding it as
 a dependency for a project is quite easy:
 
-```bash
+```sh
 cd my-project
 xpm init # Only at first use.
 
@@ -94,7 +94,7 @@ ls -l xpacks/.bin
 
 To install this specific version, use:
 
-<pre className="language-bash">
+<pre className="language-sh">
 xpm install @xpack-dev-tools/docus-mock@{frontMatter.version}.{frontMatter.npm_subversion}
 </pre>
 
