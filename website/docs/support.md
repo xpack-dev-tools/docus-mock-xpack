@@ -7,7 +7,7 @@ date: 2020-09-28 17:54:00 +0300
 
 ---
 
-## Quicklinks
+## Quick links
 
 The quick answer is to use the GitHub
 [Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/).
@@ -20,7 +20,7 @@ The original documentation is available from:
 
 ## Check the FAQ
 
-Check the [FAQ]({{ site.baseurl }}/dev-tools/docus-mock/faq/)
+Check the [FAQ](/docs/faq/)
 for similar problems.
 
 ## Check the GitHub Discussions
@@ -39,26 +39,34 @@ tracker for similar problems.
 If you still could not find a solution, if you have interesting use
 cases, if you have custom configurations, and generally if you have
 any experience that you want to share with others, use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/),
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/) pages,
 and enter a **New discussion** in the **Q&A** category.
 
 ## Register a new support ticket only if necessary
 
 If you are convinced that you identified a bug related to the binary
 distribution, not Docus Mock itself (if you have doubts, use the GitHub Discussions),
-or you have a pertinent suggestion how to enhance the **xPack Docus Mock**
+or if you have a pertinent suggestion how to enhance the **xPack Docus Mock**
 distribution, register a **New Issue** in the GitHub
 [Issues](https://github.com/xpack-dev-tools/docus-mock-xpack/issues/)
 tracker.
 
-{% include tip.html content="**DO NOT** use the GitHub Issues tracker
-for questions and support, **use the GitHub Discussions**." %}
+:::tip
+
+**Do not** use the GitHub Issues tracker
+for questions and support, **use the GitHub Discussions** pages.
+
+:::
 
 ## Use of private e-mail
 
-{% include important.html content="Please, please, please: **do not use
-private e-mail** for support, **use the GitHub
-[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/)**." %}
+:::caution Please, please, please!
+
+**Do not** use
+private e-mail for support, **use the GitHub
+[Discussions](https://github.com/xpack-dev-tools/docus-mock-xpack/discussions/)** pages.
+
+:::
 
 Sending private messages will be automatically replied with
 a link to this page.
