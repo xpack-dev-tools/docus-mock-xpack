@@ -13,7 +13,7 @@ on:
       - '**'
     # ... any of these files changes ...
     paths:
-      - 'docusaurus/**'
+      - 'website/**'
       - '.github/workflows/publish-github-pages.yml'
 
   # Allows you to run this workflow manually from the Actions tab
@@ -50,10 +50,10 @@ jobs:
           node-version: 16.x
 
       - name: Install dependencies
-        run: npm install -C docusaurus
+        run: npm install -C website
 
       - name: Generate Docusaurus
-        run: npm run build -C docusaurus
+        run: npm run build -C website
 
       - name: Setup Pages
         # https://github.com/actions/configure-pages
@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
-          path: './docusaurus/build'
+          path: './website/build'
 
       - name: Deploy to GitHub Pages
         id: deployment
