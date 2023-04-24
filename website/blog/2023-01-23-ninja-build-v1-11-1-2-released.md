@@ -49,7 +49,7 @@ armv6 is not supported).
 
 ## Download
 
-The binary files are available from GitHub <a href={ frontMatter.download_url }>Releases</a>.
+The binary files are available from GitHub [Releases]({frontMatter.download_url}).
 
 ## Prerequisites
 
@@ -255,7 +255,7 @@ with Ubuntu 18, Debian 10 and RedHat 8.
 ## Download analytics
 
 - GitHub [xpack-dev-tools/docus-mock-xpack](https://github.com/xpack-dev-tools/docus-mock-xpack/)
-  - this release [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/docus-mock-xpack/v{{ page.version }}/total.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/v{{ page.version }}/)
+  - this release [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/docus-mock-xpack/v{frontMatter.version}/total.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/v{frontMatter.version}/)
   - all xPack releases [![Github All Releases](https://img.shields.io/github/downloads/xpack-dev-tools/docus-mock-xpack/total.svg)](https://github.com/xpack-dev-tools/docus-mock-xpack/releases/)
   - [individual file counters](https://somsubhra.github.io/github-release-stats/?username=xpack-dev-tools&repository=docus-mock-xpack) (grouped per release)
 - npmjs.com [@xpack-dev-tools/docus-mock](https://www.npmjs.com/package/@xpack-dev-tools/docus-mock)
